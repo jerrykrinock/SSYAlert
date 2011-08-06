@@ -1,0 +1,1020 @@
+\hypertarget{interface_s_s_y_alert}{
+\section{SSYAlert Class Reference}
+\label{interface_s_s_y_alert}\index{SSYAlert@{SSYAlert}}
+}
+This class provides a \char`\"{}shared\char`\"{} (singleton) alert dialog which is similar to Apple's NSRunXXXXAlert but has additional features.  
+
+
+{\tt \#import $<$SSYAlert.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+(void) - \hyperlink{interface_s_s_y_alert_49b267a37e1ccc629b11d792cf774c2d}{addOtherSubview:atIndex:}
+\begin{CompactList}\small\item\em Adds an \char`\"{}other subview\char`\"{} to the receiver. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_2b22438c8dce101377e9df9de319903b}{
+(void) - \textbf{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:}}
+\label{interface_s_s_y_alert_2b22438c8dce101377e9df9de319903b}
+
+\item 
+(NSCellStateValue) - \hyperlink{interface_s_s_y_alert_b4d269b968b12c002a174839a8e319ad}{checkboxState}
+\begin{CompactList}\small\item\em Returns the state of the receiver's checkbox. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_e35134420283d7940f3115d51feabdfc}{
+(void) - \hyperlink{interface_s_s_y_alert_e35134420283d7940f3115d51feabdfc}{cleanSlate}}
+\label{interface_s_s_y_alert_e35134420283d7940f3115d51feabdfc}
+
+\begin{CompactList}\small\item\em Removes all subviews in the receiver and sets settings to default values, with the exception of the supportEmail value. \item\end{CompactList}\item 
+(NSDictionary $\ast$) - \hyperlink{interface_s_s_y_alert_0be2eb58a0463feca0bf58361ffd3a13}{configuration}
+\begin{CompactList}\small\item\em Returns a dictionary describing the current configuration. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_d100de29cd1cd7f30f23bd0cf7f323e1}{display}
+\begin{CompactList}\small\item\em Lays out all of the subviews and then invokes -display on the receiver's window. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_56274921e6a14427b3fded4caa007d2a}{doLayout}
+\begin{CompactList}\small\item\em Lays out all of the subviews. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_3bf3d563a78f82e8b667d6a4f7d188c9}{
+(void) - \hyperlink{interface_s_s_y_alert_3bf3d563a78f82e8b667d6a4f7d188c9}{dontDisplayNextPop}}
+\label{interface_s_s_y_alert_3bf3d563a78f82e8b667d6a4f7d188c9}
+
+\begin{CompactList}\small\item\em If the popped configuration is not going to be shown, I thought this might help to avoid flicker, but do not use it at this time. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_eddadc2439805c46157f26b80fc92750}{endModalSession}
+\begin{CompactList}\small\item\em Ends a modal session. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_f3de0f8c58978b6ad9963703a95b0052}{
+(void) - \hyperlink{interface_s_s_y_alert_f3de0f8c58978b6ad9963703a95b0052}{goAway}}
+\label{interface_s_s_y_alert_f3de0f8c58978b6ad9963703a95b0052}
+
+\begin{CompactList}\small\item\em Ends any modal session that might be running and closes the receiver's window. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_d63151a8a976c69f243c119472ee908b}{incrementDoubleValueBy:}
+\begin{CompactList}\small\item\em Invokes -setDoubleValue: with an value argument equal to the current value plus an increment. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_31ac913c7a345fe1decb48da5b0fdf03}{incrementDoubleValueByObject:}
+\begin{CompactList}\small\item\em Invokes -setDoubleValue: with an object argument equal to the current value plus an increment. \item\end{CompactList}\item 
+(id) - \hyperlink{interface_s_s_y_alert_e007c72529e2e0dc031572c278a0c331}{init}
+\begin{CompactList}\small\item\em Designated initializer for the \hyperlink{interface_s_s_y_alert}{SSYAlert} class. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_b2124fa025ad7c1f76bfaa6ff441fba5}{
+(BOOL) - \hyperlink{interface_s_s_y_alert_b2124fa025ad7c1f76bfaa6ff441fba5}{isVisible}}
+\label{interface_s_s_y_alert_b2124fa025ad7c1f76bfaa6ff441fba5}
+
+\begin{CompactList}\small\item\em Returns whether or not the receiver's window is visible. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_e61cd5f059bc63c651854ad1f12e4bf0}{kick}
+\begin{CompactList}\small\item\em Orders the window front. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_7a8fbbc84a4ed527df3b08dc20ca5247}{
+(BOOL) - \hyperlink{interface_s_s_y_alert_7a8fbbc84a4ed527df3b08dc20ca5247}{modalSessionRunning}}
+\label{interface_s_s_y_alert_7a8fbbc84a4ed527df3b08dc20ca5247}
+
+\begin{CompactList}\small\item\em Invokes -runModalSession on the modal session, if any, and returns whether or not the receiver is running a modal session. \item\end{CompactList}\item 
+(NSString $\ast$) - \hyperlink{interface_s_s_y_alert_c88faf997cadf44f5193db9d1c10a79f}{peekTopIdentifier}
+\begin{CompactList}\small\item\em Returns identifier of last configuration that has been pushed onto the receiver's configurations stack. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_f945f585830f7d0573e7bbc96749e935}{popConfiguration}
+\begin{CompactList}\small\item\em Pops the top configuration off the configuration stack, does a layout and displays it. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_5d8ab50f128a7b29cdf85c9b7290814e}{popConfiguration:}
+\begin{CompactList}\small\item\em Pops the current configuration of the receiver from its configuration stack, checking an identifier for debugging. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_438a6ebc533213f49238105d8bad07bd}{pushConfiguration}
+\begin{CompactList}\small\item\em Pushes the current configuration onto the top of the configuration stack. \item\end{CompactList}\item 
+(NSString $\ast$) - \hyperlink{interface_s_s_y_alert_f251640252cc9f568b5622c1a74e62ed}{pushConfiguration:}
+\begin{CompactList}\small\item\em Pushes the current configuration of the receiver onto its configuration stack, with an identifier for debugging. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_ffe4751f583a28d359d1911e0d05c1b9}{
+(void) - \hyperlink{interface_s_s_y_alert_ffe4751f583a28d359d1911e0d05c1b9}{removeAllOtherSubviews}}
+\label{interface_s_s_y_alert_ffe4751f583a28d359d1911e0d05c1b9}
+
+\begin{CompactList}\small\item\em Removes all of the {\em other subviews\/} from the receiver. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_42a3e095cf9380845f1425ddab0ca00d}{removeOtherSubviewAtIndex:}
+\begin{CompactList}\small\item\em Removes the \char`\"{}other subview\char`\"{} with a given index from the receiver. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_0306aca65c1fb2d524ac8a83151cd067}{runModalDialog}
+\begin{CompactList}\small\item\em Runs the receiver as a modal dialog. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_635093dd5f073df822990abb2e00f45c}{runModalSession}
+\begin{CompactList}\small\item\em Runs the receiver as a modal session. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_1802c30942f4a728c4c5806ef7d0d9e5}{runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:}
+\begin{CompactList}\small\item\em Runs the receiver on a sheet as a modal session and returns immediately. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_345913b14e1928b90356fdea34870286}{setButton1Title:}
+\begin{CompactList}\small\item\em Sets the title of the (rightmost) \char`\"{}default\char`\"{} button, the one whose key equivalent is . \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_d21c7e11150433813919127326a49692}{setButton2Title:}
+\begin{CompactList}\small\item\em Sets the title of the (leftmost) \char`\"{}alternate\char`\"{} button, the one whose key equivalent is 'escape'. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_fad35969716cbdfd1dd97e17b1f53b3a}{setButton3Title:}
+\begin{CompactList}\small\item\em Sets the title of the (middle) \char`\"{}other\char`\"{} button, the one with no key equivalent. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_c2c9673b89f04e422a6605887ccea330}{setCheckboxState:}
+\begin{CompactList}\small\item\em Sets the state of the receiver's checkbox. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_4dc3de44c2334f8d871bd01eeffe75b6}{setCheckboxTitle:}
+\begin{CompactList}\small\item\em Sets the title of the checkbox which will appear above the row of buttons at the bottom, in the right column of the receiver. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_afae30a5f44eb75295549e0330cce30b}{setDoubleValue:}
+\begin{CompactList}\small\item\em Sets the double value of the receiver's progress bar. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_13b93cc5e7a16913f29ce3da427509d1}{setHelpAnchor:}
+\begin{CompactList}\small\item\em Sets the anchor in the application's Help Book which will be displayed in Help Viewer when the user clicks the question-mark \char`\"{}Help\char`\"{} button in the receiver's window. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_ecb6c9cfdff8c675ad91af57ffbc0fdf}{setIconStyle:}
+\begin{CompactList}\small\item\em Sets the icon which will appear in the receiver. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_45ca8f6438df88f90a5fdadbf0e9e8b4}{setIndeterminate:}
+\begin{CompactList}\small\item\em Sets the receiver's progress bar animation to be indeterminate or not. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_a581989651d0253051484d8b87c4b9db}{setMaxValue:}
+\begin{CompactList}\small\item\em Sets the maximum value of the receiver's progress bar. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_dfe97ccfa31ae7f89f22140a75cdb272}{
+(void) - \hyperlink{interface_s_s_y_alert_dfe97ccfa31ae7f89f22140a75cdb272}{setShowsProgressBar:}}
+\label{interface_s_s_y_alert_dfe97ccfa31ae7f89f22140a75cdb272}
+
+\begin{CompactList}\small\item\em Sets whether or not the receiver shows a progress bar. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_48bbcefe2f439c4185d19c5d34a744c1}{setSmallText:}
+\begin{CompactList}\small\item\em Sets the receiver's Small Text to the localized word \char`\"{}Alert\char`\"{}, stolen from NSGetAlertPanel. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_7742169df21e1a6a03f4efba3a913555}{setSmallTextAlignment:}
+\begin{CompactList}\small\item\em Sets the text alignment of the receiver's small text field. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_e215fbf01c8ec15042ec40bb23429482}{setTitleText:}
+\begin{CompactList}\small\item\em Sets the receiver's Title Text of the receiver to a given string. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_e816db2d738fc965ab7ff2210c174535}{setTitleToDefaultAlert}
+\begin{CompactList}\small\item\em Sets the receiver's Title Text to the localized word \char`\"{}Alert\char`\"{}, stolen from NSGetAlertPanel. \item\end{CompactList}\item 
+(void) - \hyperlink{interface_s_s_y_alert_6e1c01e863e79182a929fa7678fb6fd9}{setWindowTitle:}
+\begin{CompactList}\small\item\em Sets the title of the receiver's window. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_4d012f3f229f8e44dc0646e62890b49f}{
+(void) - \hyperlink{interface_s_s_y_alert_4d012f3f229f8e44dc0646e62890b49f}{show}}
+\label{interface_s_s_y_alert_4d012f3f229f8e44dc0646e62890b49f}
+
+\begin{CompactList}\small\item\em Sends -makeKeyAndOrderFront to the receiver's window. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+(\hyperlink{interface_s_s_y_alert}{SSYAlert} $\ast$) + \hyperlink{interface_s_s_y_alert_2af19780d34ceac4d2900b5f8c2178fe}{alert}
+\begin{CompactList}\small\item\em Convenience method for returning an autoreleased \hyperlink{interface_s_s_y_alert}{SSYAlert}. \item\end{CompactList}\item 
+(int) + \hyperlink{interface_s_s_y_alert_5665fce58be755ad7d1e1ed5461512c5}{alertError:}
+\begin{CompactList}\small\item\em Displays an error using the application's shared alert. \item\end{CompactList}\item 
+(void) + \hyperlink{interface_s_s_y_alert_f30ca2fe3aef894f71d33c031b57cae5}{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:}
+\begin{CompactList}\small\item\em Creates an alert sheet on a given window and displays a given error. Warning, I was going to use this method but did not. It has never been tested. \item\end{CompactList}\item 
+(int) + \hyperlink{interface_s_s_y_alert_d39a91c4b93852513a2e0306a9c81041}{runModalDialogTitle:message:buttons:}
+\begin{CompactList}\small\item\em Runs a modal dialog with a message and 1-3 buttons. \item\end{CompactList}\item 
+(int) + \hyperlink{interface_s_s_y_alert_8e294391f819c1e888b41adb2f5ece52}{runModalDialogTitle:message:buttonsArray:}
+\begin{CompactList}\small\item\em Runs a modal dialog with a message and 1-3 buttons. \item\end{CompactList}\item 
+(\hyperlink{interface_s_s_y_alert}{SSYAlert} $\ast$) + \hyperlink{interface_s_s_y_alert_d81f6d234a6bbe8a7181c739f0b6ef2e}{sharedAlert}
+\begin{CompactList}\small\item\em Convenience method for returning the application-wide sharedAlert instance of NSAlert. \item\end{CompactList}\item 
+(NSFont $\ast$) + \hyperlink{interface_s_s_y_alert_7235377dad1e98bade605b665770f056}{smallTextFont}
+\begin{CompactList}\small\item\em Returns the font used in the receiver's small text. \item\end{CompactList}\item 
+(float) + \hyperlink{interface_s_s_y_alert_7e4e69784b95d9fa49cbc8dc12fc2e0e}{smallTextHeight}
+\begin{CompactList}\small\item\em Returns the height of the receiver's small text view, when it showing a single line of text. \item\end{CompactList}\item 
+(NSFont $\ast$) + \hyperlink{interface_s_s_y_alert_203afc0936f3aa64eb7ac373644902b2}{titleTextFont}
+\begin{CompactList}\small\item\em Returns the font used in the receiver's title text. \item\end{CompactList}\item 
+(float) + \hyperlink{interface_s_s_y_alert_1b78c67ac1fbc0cd72bee1875f49fa3a}{titleTextHeight}
+\begin{CompactList}\small\item\em Returns the height of the receiver's title text view, when it showing a single line of text. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{interface_s_s_y_alert_0faaf3c3063f4a2e92a77ba7f9513294}{
+NSButton $\ast$ \textbf{button1}}
+\label{interface_s_s_y_alert_0faaf3c3063f4a2e92a77ba7f9513294}
+
+\item 
+\hypertarget{interface_s_s_y_alert_84d7323b18be5d034b5be50f4609a546}{
+NSButton $\ast$ \textbf{button2}}
+\label{interface_s_s_y_alert_84d7323b18be5d034b5be50f4609a546}
+
+\item 
+\hypertarget{interface_s_s_y_alert_bafab9e1e4bbc1e9e8a224eaabb78714}{
+NSButton $\ast$ \textbf{button3}}
+\label{interface_s_s_y_alert_bafab9e1e4bbc1e9e8a224eaabb78714}
+
+\item 
+\hypertarget{interface_s_s_y_alert_1eb7220eb9febd647279d0264ef44bea}{
+NSButton $\ast$ \textbf{buttonPrototype}}
+\label{interface_s_s_y_alert_1eb7220eb9febd647279d0264ef44bea}
+
+\item 
+\hypertarget{interface_s_s_y_alert_3ceda3d5adbbdfb7fe133acf2ba682a5}{
+NSButton $\ast$ \textbf{checkbox}}
+\label{interface_s_s_y_alert_3ceda3d5adbbdfb7fe133acf2ba682a5}
+
+\item 
+\hypertarget{interface_s_s_y_alert_3dd7eaef43a88e72b21e479872ca9f9c}{
+BOOL \textbf{doingModalDialog}}
+\label{interface_s_s_y_alert_3dd7eaef43a88e72b21e479872ca9f9c}
+
+\item 
+\hypertarget{interface_s_s_y_alert_287ec89d3f6a6268780fabf8fc65ee13}{
+BOOL \textbf{doNotDisplayNextPop}}
+\label{interface_s_s_y_alert_287ec89d3f6a6268780fabf8fc65ee13}
+
+\item 
+\hypertarget{interface_s_s_y_alert_f3b944a663c7ece6976180cb31f99bad}{
+NSError $\ast$ \textbf{errorPresenting}}
+\label{interface_s_s_y_alert_f3b944a663c7ece6976180cb31f99bad}
+
+\item 
+\hypertarget{interface_s_s_y_alert_84fdae8748a7b3f46bf0a5fd15bb8cbc}{
+NSString $\ast$ \textbf{helpAnchorString}}
+\label{interface_s_s_y_alert_84fdae8748a7b3f46bf0a5fd15bb8cbc}
+
+\item 
+\hypertarget{interface_s_s_y_alert_398980a229db9c84d7ef521183d62d77}{
+NSButton $\ast$ \textbf{helpButton}}
+\label{interface_s_s_y_alert_398980a229db9c84d7ef521183d62d77}
+
+\item 
+\hypertarget{interface_s_s_y_alert_ae733ffdb4155121f3dc2e593dbb7ede}{
+NSImageView $\ast$ \textbf{icon}}
+\label{interface_s_s_y_alert_ae733ffdb4155121f3dc2e593dbb7ede}
+
+\item 
+\hypertarget{interface_s_s_y_alert_8c376f5d30dc153d896408bc1fe77ebe}{
+NSImageView $\ast$ \textbf{iconCritical}}
+\label{interface_s_s_y_alert_8c376f5d30dc153d896408bc1fe77ebe}
+
+\item 
+\hypertarget{interface_s_s_y_alert_d10dde4bec21f3e6ae107f54fbc59b18}{
+NSImageView $\ast$ \textbf{iconInformational}}
+\label{interface_s_s_y_alert_d10dde4bec21f3e6ae107f54fbc59b18}
+
+\item 
+\hypertarget{interface_s_s_y_alert_43b4851bf4b4e100aa74022118bbdde2}{
+BOOL \textbf{isVisible}}
+\label{interface_s_s_y_alert_43b4851bf4b4e100aa74022118bbdde2}
+
+\item 
+\hypertarget{interface_s_s_y_alert_ae998df31358337c7b899b3fc50c6903}{
+NSModalSession \textbf{modalSession}}
+\label{interface_s_s_y_alert_ae998df31358337c7b899b3fc50c6903}
+
+\item 
+\hypertarget{interface_s_s_y_alert_7bf654708edf52c176db42b9914a4f67}{
+NSInteger \textbf{nDone}}
+\label{interface_s_s_y_alert_7bf654708edf52c176db42b9914a4f67}
+
+\item 
+\hypertarget{interface_s_s_y_alert_cc7f0ddfc66b1e976d433841a937b7bd}{
+NSTimeInterval \textbf{nextProgressUpdate}}
+\label{interface_s_s_y_alert_cc7f0ddfc66b1e976d433841a937b7bd}
+
+\item 
+\hypertarget{interface_s_s_y_alert_5aeb6db7343dcc8649cde5965d759f09}{
+NSButton $\ast$ \textbf{supportButton}}
+\label{interface_s_s_y_alert_5aeb6db7343dcc8649cde5965d759f09}
+
+\item 
+\hypertarget{interface_s_s_y_alert_1d600ac201e1d3e9a93cd6803cf63e64}{
+NSString $\ast$ \textbf{supportEmailString}}
+\label{interface_s_s_y_alert_1d600ac201e1d3e9a93cd6803cf63e64}
+
+\item 
+\hypertarget{interface_s_s_y_alert_ce2a59768708546f669470ec7255a63f}{
+NSPoint \textbf{windowTopCenter}}
+\label{interface_s_s_y_alert_ce2a59768708546f669470ec7255a63f}
+
+\item 
+\hypertarget{interface_s_s_y_alert_d1de5ffdf2fd0c63b08888f3f8742254}{
+NSString $\ast$ \textbf{wordAlert}}
+\label{interface_s_s_y_alert_d1de5ffdf2fd0c63b08888f3f8742254}
+
+\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+NSInteger \hyperlink{interface_s_s_y_alert_b3065737274d58b88c313f36a54316eb}{alertReturn}
+\begin{CompactList}\small\item\em Indicates which button was last clicked. \item\end{CompactList}\item 
+BOOL \hyperlink{interface_s_s_y_alert_67ba8d274d0cfa509a178ee291f60d6f}{allowsShrinking}
+\begin{CompactList}\small\item\em Sets whether or not the titleTextView, smallTextView, and otherSubview heights are allowed to shrink if their content is reduced. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_77b7399c0360bd1df68fb67fdceb8b9a}{
+id \textbf{clickObject}}
+\label{interface_s_s_y_alert_77b7399c0360bd1df68fb67fdceb8b9a}
+
+\item 
+\hypertarget{interface_s_s_y_alert_cb50f0a974f22ac67b867ac9ac1bbbc0}{
+SEL \textbf{clickSelector}}
+\label{interface_s_s_y_alert_cb50f0a974f22ac67b867ac9ac1bbbc0}
+
+\item 
+\hypertarget{interface_s_s_y_alert_29f41d63091fcdd18bf8bc68b34b2909}{
+id \textbf{clickTarget}}
+\label{interface_s_s_y_alert_29f41d63091fcdd18bf8bc68b34b2909}
+
+\item 
+NSMutableArray $\ast$ \hyperlink{interface_s_s_y_alert_e78e0ec0ccc4588e3fed7e25813b2e94}{configurations}
+\begin{CompactList}\small\item\em Provides direct access to the receiver's configurations stack. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_906b85403c881cf31ed94090f56da06c}{
+NSWindow $\ast$ \hyperlink{interface_s_s_y_alert_906b85403c881cf31ed94090f56da06c}{documentWindow}}
+\label{interface_s_s_y_alert_906b85403c881cf31ed94090f56da06c}
+
+\begin{CompactList}\small\item\em A stupid patch for the fact that when a modal sheet ends, the action method only gives me the button and not the documentWindow or its sheet which I need to forward to endSheet:. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_ee3533c790c49bc3124d1aef4a5146b6}{
+BOOL \hyperlink{interface_s_s_y_alert_ee3533c790c49bc3124d1aef4a5146b6}{isEnabled}}
+\label{interface_s_s_y_alert_ee3533c790c49bc3124d1aef4a5146b6}
+
+\begin{CompactList}\small\item\em Sets whether or not the receiver's default button, button 1, nominally the \char`\"{}OK\char`\"{} button, is enabled.~ If not set, default value is YES.~ Validation can be performed in other subviews and fed back here to en/disable the \char`\"{}OK\char`\"{} button, along with the optional tooltip whyDisabled. \item\end{CompactList}\item 
+NSMutableArray $\ast$ \hyperlink{interface_s_s_y_alert_eb559c5354ac41e9143ac2970de5addc}{otherSubviews}
+\begin{CompactList}\small\item\em Provides direct access to the receiver's otherSubviews. \item\end{CompactList}\item 
+NSProgressIndicator $\ast$ \hyperlink{interface_s_s_y_alert_cc8eac2be6bd9cc10999af6b51994082}{progressBar}
+\begin{CompactList}\small\item\em Provides direct access to the receiver's progress bar for special purposes. \item\end{CompactList}\item 
+BOOL \hyperlink{interface_s_s_y_alert_57507576c298844a045e2e9a9fb2ce0c}{progressBarShouldAnimate}
+\begin{CompactList}\small\item\em Starts and stops animation of the receiver's progress bar. \item\end{CompactList}\item 
+float \hyperlink{interface_s_s_y_alert_69975a8b700fb1d2985b2794e0120e2f}{rightColumnMinimumWidth}
+\begin{CompactList}\small\item\em Sets the mininum width of the right column of the receiver. \item\end{CompactList}\item 
+NSInteger \hyperlink{interface_s_s_y_alert_bcde739174ec356844c26b7487ea1a79}{smallTextMaxChars}
+\begin{CompactList}\small\item\em Sets maximum number of characters, after which the smallText will be nicely truncated. \item\end{CompactList}\item 
+NSTextView $\ast$ \hyperlink{interface_s_s_y_alert_b15db601566d115c516c43320f306603}{smallTextView}
+\begin{CompactList}\small\item\em Provides direct access to the receiver's small text view for special purposes. \item\end{CompactList}\item 
+NSInteger \hyperlink{interface_s_s_y_alert_99e51047e4caf119c09dc51042afa504}{titleMaxChars}
+\begin{CompactList}\small\item\em Sets maximum number of characters, after which the title will be nicely truncated. \item\end{CompactList}\item 
+NSTextView $\ast$ \hyperlink{interface_s_s_y_alert_787999e7c2336835bccfccb6a956128e}{titleTextView}
+\begin{CompactList}\small\item\em Provides direct access to the receiver's title text view for special purposes. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_alert_d0b61bef0522e8b093f737dbd2362e35}{
+NSString $\ast$ \hyperlink{interface_s_s_y_alert_d0b61bef0522e8b093f737dbd2362e35}{whyDisabled}}
+\label{interface_s_s_y_alert_d0b61bef0522e8b093f737dbd2362e35}
+
+\begin{CompactList}\small\item\em A tooltip shown on the receiver's default button, button 1. If set to nil, the tooltip is removed. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a \char`\"{}shared\char`\"{} (singleton) alert dialog which is similar to Apple's NSRunXXXXAlert but has additional features. 
+
+The basic look is similar to Apple's alert.~ There are two columns, left and right.~ The left column may have, from top to bottom: \begin{itemize}
+\item An icon \item A \char`\"{}Help\char`\"{} button (with a question-mark) \item A \char`\"{}Support\char`\"{} button (with a life-preserver) \end{itemize}
+and the right column may have, from top to bottom: \begin{itemize}
+\item An \char`\"{}title\char`\"{}.~ This is like a \char`\"{}paragraph\char`\"{} title, at the top of the window's content view, not to be confused with the window title. \item A progress bar \item A \char`\"{}small text\char`\"{} text view.~ This is for displaying message details. \item An arbitrary number of \char`\"{}other subviews\char`\"{}.~ If you want the height of the other subview to vary with its content, override the -sizeHeightToFitAllowShrinking which is implemented as a no-op in category NSView (HeightSizableToFit).~ Two ready-made such views are provided in the \hyperlink{interface_s_s_y_alert}{SSYAlert} framework: \begin{itemize}
+\item An editable text field with a label above it (\hyperlink{interface_s_s_y_labelled_text_field}{SSYLabelledTextField}) \item A popup button with a label above it (\hyperlink{interface_s_s_y_labelled_pop_up}{SSYLabelledPopUp}) \end{itemize}
+\item A checkbox. \item 0 to 3 buttons. \end{itemize}
+
+
+The additional features are: \begin{itemize}
+\item Optional progress bar \item Optional checkbox which may be used for stuff like \char`\"{}Don't show this again\char`\"{}. \item Optional Help button. \item Optional Support button (Creates a new email message to designated support email address.) \item Optional text field(s). \item Optional popup menu(s). \item Can be run as modal session as well as modal dialog. \item Same alert can be reconfigured on the fly to show progress of cascaded or nested processes, which looks much better than having alerts rapidly appear and disappear. \item A push/poppable \char`\"{}stack\char`\"{} of configurations remembers nested configurations. \item Relatively foolproof \char`\"{}identifiers\char`\"{} help to debug configuration stack mismatches. \item Also a replacement for -\mbox{[}NSError presentError:\mbox{]}.~ Use +\mbox{[}\hyperlink{interface_s_s_y_alert}{SSYAlert} alertError:\mbox{]}. \end{itemize}
+
+
+Alerts similar to NSRunXXXAlert and -\mbox{[}NSError presentError:\mbox{]} can be run using one of the \char`\"{}all in one\char`\"{} class methods.~ For more complicated alerts, use this idiom:  
+
+\begin{enumerate}
+\item Get the alert = \mbox{[}\hyperlink{interface_s_s_y_alert}{SSYAlert} sharedAlert\mbox{]} \item \mbox{[}Optional\mbox{]} If most of the previous subviews are to be removed, -cleanSlate. \item \mbox{[}Optional\mbox{]} If desired to push the previous configuration onto the stack so that it can be redisplayed when this alert is cleared, -pushConfiguration.~ You can also safely do this if there is no configuration to push. \item Send configuration messages to show the desired title, message, progress bar, checkbox, other subviews, buttons, whatever you want. \item To run as a non-modal window, set a clickTarget, clickSelector and optional clickObject.~ Then, send -display, which calculates layout and displays \item To run as modal dialog or modal session, -runModalDialog or -runModalSession.~ (These methods invoke -display for you.) \item If running a modal session, send -modalSessionRunning in your modal session loop. \item To end a modal session without causing alert to go away, -endModalSession. \item If, at the beginning, you sent a -pushConfiguration, now balance with a -popConfiguration. \item To get results from a non-modal window, implement clickSelector in your clickTarget.\end{enumerate}
+
+
+Notes  \begin{enumerate}
+\item If you are not sure whether or not there is a previous configuration to push, it is OK to push and pop the configuration.~ The push will perform no operation and the pop will simply invoke -goAway.  \item One time I tried to \char`\"{}nest\char`\"{} modal sessions and got unpredictable behavior and crashes.~ I'm not if this is legal or makes sense and recommend against it.  \end{enumerate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_s_s_y_alert_49b267a37e1ccc629b11d792cf774c2d}{
+\index{SSYAlert@{SSYAlert}!addOtherSubview:atIndex:@{addOtherSubview:atIndex:}}
+\index{addOtherSubview:atIndex:@{addOtherSubview:atIndex:}!SSYAlert@{SSYAlert}}
+\subsubsection[{addOtherSubview:atIndex:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) addOtherSubview: (NSView$\ast$) {\em subview}\/ atIndex: (int) {\em index}}}
+\label{interface_s_s_y_alert_49b267a37e1ccc629b11d792cf774c2d}
+
+
+Adds an \char`\"{}other subview\char`\"{} to the receiver. 
+
+An \char`\"{}other subview\char`\"{} is placed near the middle of the receiver's right column. \hypertarget{interface_s_s_y_alert_2af19780d34ceac4d2900b5f8c2178fe}{
+\index{SSYAlert@{SSYAlert}!alert@{alert}}
+\index{alert@{alert}!SSYAlert@{SSYAlert}}
+\subsubsection[{alert}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf SSYAlert} $\ast$) alert }}
+\label{interface_s_s_y_alert_2af19780d34ceac4d2900b5f8c2178fe}
+
+
+Convenience method for returning an autoreleased \hyperlink{interface_s_s_y_alert}{SSYAlert}. 
+
+Use this when preparing an \hyperlink{interface_s_s_y_alert}{SSYAlert} to run as a sheet on a document.
+
+\begin{Desc}
+\item[Returns:]An new autoreleased \hyperlink{interface_s_s_y_alert}{SSYAlert}. \end{Desc}
+\hypertarget{interface_s_s_y_alert_5665fce58be755ad7d1e1ed5461512c5}{
+\index{SSYAlert@{SSYAlert}!alertError:@{alertError:}}
+\index{alertError:@{alertError:}!SSYAlert@{SSYAlert}}
+\subsubsection[{alertError:}]{\setlength{\rightskip}{0pt plus 5cm}+ (int) alertError: (NSError$\ast$) {\em error}}}
+\label{interface_s_s_y_alert_5665fce58be755ad7d1e1ed5461512c5}
+
+
+Displays an error using the application's shared alert. 
+
+An improved version of Apple's -presentError: modal dialog. Looks nicer than -presentError:, in my opinion.~ Not all boldface.
+
+If error is nil, or if \mbox{[}NSScriptCommand currentCommand\mbox{]} is not nil, this method is a no-op and returns NSAlertErrorReturn.
+
+If the error returns a -localizedFailureReason, presents that in the smallText following a localized label \char`\"{}Possible reason for Error:\char`\"{}.
+
+If the error returns a -localizedRecoverySuggestion, presents that in the small text folowing a localized label \char`\"{}Suggestion to Fix this Error:\char`\"{}.
+
+If the error returns a -localizedRecoveryOptions, which should be an array of 0-3 strings, the string(s) in this array will be the title(s) of the button(s) in the dialog.~ The first string will be the title of the right-most and default button, the second will be the right button, and the third will be the center button.~ Note that this works like \hyperlink{interface_s_s_y_alert}{SSYAlert} and NSAlert, and not like Apple's -presentError methods which can present an unlimited number of buttons starting from right to left and moving to the left.
+
+If an email address string has been given in the Info.plist key SSYAlert\_\-SupportEmail, the dialog will have a \char`\"{}support\char`\"{} button (as described elsewhere) targetting this email.
+
+After the user clicks a button, \begin{itemize}
+\item if the error returns a -recoveryAttempter, a attemptRecoveryFromError:optionIndex: message will be sent to the recovery attempter, with option index equal to the 0 if the right button was clicked, 1 of the middle button was clicked and 2 if the left button was clicked.~ And, this method will return NSAlertRecoveryAttemptedReturn. \item if the error does not returns a -recoveryAttempter, this method will return NSAlertDefaultReturn if the right button was clicked, NSAlertAlternateReturn if the left button was clicked, and NSAlertOtherReturn if the middle button was clicked. \end{itemize}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em error}]The error to be presented, or nil. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]NSAlertDefaultReturn, NSAlertAlternateReturn, NSAlertOtherReturn, NSAlertErrorReturn or NSAlertRecoveryAttempted. \end{Desc}
+\hypertarget{interface_s_s_y_alert_f30ca2fe3aef894f71d33c031b57cae5}{
+\index{SSYAlert@{SSYAlert}!alertError:onWindow:modalDelegate:didEndSelector:contextInfo:@{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:}}
+\index{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:@{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:}!SSYAlert@{SSYAlert}}
+\subsubsection[{alertError:onWindow:modalDelegate:didEndSelector:contextInfo:}]{\setlength{\rightskip}{0pt plus 5cm}+ (void) alertError: (NSError $\ast$) {\em error}\/ onWindow: (NSWindow $\ast$) {\em documentWindow}\/ modalDelegate: (id) {\em modalDelegate}\/ didEndSelector: (SEL) {\em didEndSelector}\/ contextInfo: (void $\ast$) {\em contextInfo}}}
+\label{interface_s_s_y_alert_f30ca2fe3aef894f71d33c031b57cae5}
+
+
+Creates an alert sheet on a given window and displays a given error. Warning, I was going to use this method but did not. It has never been tested. 
+
+Most of this method's behavior follows that of +alertError:. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em error}]The error to be presented, or nil. \item[{\em documentWindow}]The document window to which to attach the sheet. \item[{\em modalDelegate}]The object which will receive and must respond to the didEndSelector, or nil if you want the receiver to handle it. If the receiver handles it, its alertReturn will be set to the NSAlertReturn value corresponding to the button clicked by the user. \item[{\em didEndSelector}]The selector which will be sent to the modal delegate if it is not nil. Must match the signature with signature of sheetDidEnd:(NSWindow $\ast$)returnCode:(int)contextInfo:(void$\ast$).~ Also, to make the sheet go away, the didEndSelector must send -orderOut: to the 'sheet' argument it receives. \item[{\em contextInfo}]Pointer to data which will be returned as the third element of the didEndSelector. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_b4d269b968b12c002a174839a8e319ad}{
+\index{SSYAlert@{SSYAlert}!checkboxState@{checkboxState}}
+\index{checkboxState@{checkboxState}!SSYAlert@{SSYAlert}}
+\subsubsection[{checkboxState}]{\setlength{\rightskip}{0pt plus 5cm}- (NSCellStateValue) checkboxState }}
+\label{interface_s_s_y_alert_b4d269b968b12c002a174839a8e319ad}
+
+
+Returns the state of the receiver's checkbox. 
+
+Message is forwarded directly to the checkbox. \begin{Desc}
+\item[Returns:]NSOnState, NSOffState or NSMixedState \end{Desc}
+\hypertarget{interface_s_s_y_alert_0be2eb58a0463feca0bf58361ffd3a13}{
+\index{SSYAlert@{SSYAlert}!configuration@{configuration}}
+\index{configuration@{configuration}!SSYAlert@{SSYAlert}}
+\subsubsection[{configuration}]{\setlength{\rightskip}{0pt plus 5cm}- (NSDictionary $\ast$) configuration }}
+\label{interface_s_s_y_alert_0be2eb58a0463feca0bf58361ffd3a13}
+
+
+Returns a dictionary describing the current configuration. 
+
+Useful for debugging. \begin{Desc}
+\item[Returns:]The dictionary \end{Desc}
+\hypertarget{interface_s_s_y_alert_d100de29cd1cd7f30f23bd0cf7f323e1}{
+\index{SSYAlert@{SSYAlert}!display@{display}}
+\index{display@{display}!SSYAlert@{SSYAlert}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}- (void) display }}
+\label{interface_s_s_y_alert_d100de29cd1cd7f30f23bd0cf7f323e1}
+
+
+Lays out all of the subviews and then invokes -display on the receiver's window. 
+
+This method, or -doLayout, must be invoked after adding, removing, or changing size of any subview. \hypertarget{interface_s_s_y_alert_56274921e6a14427b3fded4caa007d2a}{
+\index{SSYAlert@{SSYAlert}!doLayout@{doLayout}}
+\index{doLayout@{doLayout}!SSYAlert@{SSYAlert}}
+\subsubsection[{doLayout}]{\setlength{\rightskip}{0pt plus 5cm}- (void) doLayout }}
+\label{interface_s_s_y_alert_56274921e6a14427b3fded4caa007d2a}
+
+
+Lays out all of the subviews. 
+
+This method must be invoked after adding, removing, or changing size of any subview. \hypertarget{interface_s_s_y_alert_eddadc2439805c46157f26b80fc92750}{
+\index{SSYAlert@{SSYAlert}!endModalSession@{endModalSession}}
+\index{endModalSession@{endModalSession}!SSYAlert@{SSYAlert}}
+\subsubsection[{endModalSession}]{\setlength{\rightskip}{0pt plus 5cm}- (void) endModalSession }}
+\label{interface_s_s_y_alert_eddadc2439805c46157f26b80fc92750}
+
+
+Ends a modal session. 
+
+If a modal session is not running, this method does nothing.
+
+Note that a {\em modal session\/} is similar to but not the same as a modal dialog. \hypertarget{interface_s_s_y_alert_d63151a8a976c69f243c119472ee908b}{
+\index{SSYAlert@{SSYAlert}!incrementDoubleValueBy:@{incrementDoubleValueBy:}}
+\index{incrementDoubleValueBy:@{incrementDoubleValueBy:}!SSYAlert@{SSYAlert}}
+\subsubsection[{incrementDoubleValueBy:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) incrementDoubleValueBy: (double) {\em increment}}}
+\label{interface_s_s_y_alert_d63151a8a976c69f243c119472ee908b}
+
+
+Invokes -setDoubleValue: with an value argument equal to the current value plus an increment. 
+
+The increment may be negative. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em increment}]The increment to be added \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_31ac913c7a345fe1decb48da5b0fdf03}{
+\index{SSYAlert@{SSYAlert}!incrementDoubleValueByObject:@{incrementDoubleValueByObject:}}
+\index{incrementDoubleValueByObject:@{incrementDoubleValueByObject:}!SSYAlert@{SSYAlert}}
+\subsubsection[{incrementDoubleValueByObject:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) incrementDoubleValueByObject: (NSNumber$\ast$) {\em increment}}}
+\label{interface_s_s_y_alert_31ac913c7a345fe1decb48da5b0fdf03}
+
+
+Invokes -setDoubleValue: with an object argument equal to the current value plus an increment. 
+
+The increment may be negative. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em increment}]An NSNumber of a double whose value is the increment to be added \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_e007c72529e2e0dc031572c278a0c331}{
+\index{SSYAlert@{SSYAlert}!init@{init}}
+\index{init@{init}!SSYAlert@{SSYAlert}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}- (id) init }}
+\label{interface_s_s_y_alert_e007c72529e2e0dc031572c278a0c331}
+
+
+Designated initializer for the \hyperlink{interface_s_s_y_alert}{SSYAlert} class. 
+
+Using this method to create separate \hyperlink{interface_s_s_y_alert}{SSYAlert} instances is discouraged.~ Use the singleton created by +sharedAlert instead. \begin{Desc}
+\item[Returns:]An initialized instance of \hyperlink{interface_s_s_y_alert}{SSYAlert}. \end{Desc}
+\hypertarget{interface_s_s_y_alert_e61cd5f059bc63c651854ad1f12e4bf0}{
+\index{SSYAlert@{SSYAlert}!kick@{kick}}
+\index{kick@{kick}!SSYAlert@{SSYAlert}}
+\subsubsection[{kick}]{\setlength{\rightskip}{0pt plus 5cm}- (void) kick }}
+\label{interface_s_s_y_alert_e61cd5f059bc63c651854ad1f12e4bf0}
+
+
+Orders the window front. 
+
+Just an experiment I was playing with \hypertarget{interface_s_s_y_alert_c88faf997cadf44f5193db9d1c10a79f}{
+\index{SSYAlert@{SSYAlert}!peekTopIdentifier@{peekTopIdentifier}}
+\index{peekTopIdentifier@{peekTopIdentifier}!SSYAlert@{SSYAlert}}
+\subsubsection[{peekTopIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}- (NSString $\ast$) peekTopIdentifier }}
+\label{interface_s_s_y_alert_c88faf997cadf44f5193db9d1c10a79f}
+
+
+Returns identifier of last configuration that has been pushed onto the receiver's configurations stack. 
+
+This method is useful for debugging \begin{Desc}
+\item[Returns:]The identifier \end{Desc}
+\hypertarget{interface_s_s_y_alert_f945f585830f7d0573e7bbc96749e935}{
+\index{SSYAlert@{SSYAlert}!popConfiguration@{popConfiguration}}
+\index{popConfiguration@{popConfiguration}!SSYAlert@{SSYAlert}}
+\subsubsection[{popConfiguration}]{\setlength{\rightskip}{0pt plus 5cm}- (void) popConfiguration }}
+\label{interface_s_s_y_alert_f945f585830f7d0573e7bbc96749e935}
+
+
+Pops the top configuration off the configuration stack, does a layout and displays it. 
+
+If the stack is empty, simply sends a -goAway.
+
+The layout and display is accomplished by sending the receiver a -display message.
+
+If you are not sure of the configuration stack contents, you can check that the configuration popped off the stack is the one you expected by using pushConfiguration: and popConfiguration: instead of pushConfiguration and popConfiguration. \hypertarget{interface_s_s_y_alert_5d8ab50f128a7b29cdf85c9b7290814e}{
+\index{SSYAlert@{SSYAlert}!popConfiguration:@{popConfiguration:}}
+\index{popConfiguration:@{popConfiguration:}!SSYAlert@{SSYAlert}}
+\subsubsection[{popConfiguration:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) popConfiguration: (NSString$\ast$) {\em identifier}}}
+\label{interface_s_s_y_alert_5d8ab50f128a7b29cdf85c9b7290814e}
+
+
+Pops the current configuration of the receiver from its configuration stack, checking an identifier for debugging. 
+
+This method is good for debugging problems if there is any chance of configuration stack pushes and pops getting out of sequence. If you have no fear of that, such as if you can see the push and pop invocations at the beginning and end of a small section of code with no branches, consider using the simpler method pushConfiguration method (Note: no arguments) instead of this method.
+
+If the configurations stack is empty, this method will simply invoke -goAway.
+
+If you pass an empty strying as the identifier argument, this method will pop and display the top configuration if the stack is not empty.
+
+If you pass a non-empty string as the identifier, this method will check that the identifier of the popped configuration is equal to the identifier argument.~ If it is not, a warning will print to Console.
+
+This method will also print a Console warning if you pass it a non-nil identifier but there are no configurations to pop. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em identifier}]An identifier which was returned by a previous invocation of pushConfiguration: on the receiver, or nil if checking the stack is not desired. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_438a6ebc533213f49238105d8bad07bd}{
+\index{SSYAlert@{SSYAlert}!pushConfiguration@{pushConfiguration}}
+\index{pushConfiguration@{pushConfiguration}!SSYAlert@{SSYAlert}}
+\subsubsection[{pushConfiguration}]{\setlength{\rightskip}{0pt plus 5cm}- (void) pushConfiguration }}
+\label{interface_s_s_y_alert_438a6ebc533213f49238105d8bad07bd}
+
+
+Pushes the current configuration onto the top of the configuration stack. 
+
+If the alert has never been configured, it will be a tiny, empty window. That \char`\"{}empty\char`\"{} configuration will be pushed onto the stack. But that's OK because its isVisible attribute with value NO is also pushed as part of the configuration, and when the receiver is popped back to the empty configuration, this value will cause an -orderOut: message to be sent to the window.
+
+If you are not sure of the configuration stack contents, you can check that the configuration popped off the stack is the one you expected by using pushConfiguration: and popConfiguration: instead of pushConfiguration and popConfiguration. \hypertarget{interface_s_s_y_alert_f251640252cc9f568b5622c1a74e62ed}{
+\index{SSYAlert@{SSYAlert}!pushConfiguration:@{pushConfiguration:}}
+\index{pushConfiguration:@{pushConfiguration:}!SSYAlert@{SSYAlert}}
+\subsubsection[{pushConfiguration:}]{\setlength{\rightskip}{0pt plus 5cm}- (NSString $\ast$) pushConfiguration: (NSString$\ast$) {\em identifier}}}
+\label{interface_s_s_y_alert_f251640252cc9f568b5622c1a74e62ed}
+
+
+Pushes the current configuration of the receiver onto its configuration stack, with an identifier for debugging. 
+
+This method is good for debugging problems if there is any chance of configuration stack pushes and pops getting out of sequence. If you have no fear of that, such as if you can see the push and pop invocations at the beginning and end of a small section of code with no branches, consider using the simpler method pushConfiguration method (Note: no arguments) instead of this method. 
+
+If the alert window is currently visible, this method will push its current configuration and return an identifier. If the alert window is not currently visible, this method will do nothing and return nil. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em identifierPrefix}]A string which will be used as a prefix for the returned identifier. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An identifier for the configuration which was pushed onto the stack.~ It will be a sequence number that is unique within the receiver's configurations, prefixed with the identifierPrefix if one was passed. \end{Desc}
+\hypertarget{interface_s_s_y_alert_42a3e095cf9380845f1425ddab0ca00d}{
+\index{SSYAlert@{SSYAlert}!removeOtherSubviewAtIndex:@{removeOtherSubviewAtIndex:}}
+\index{removeOtherSubviewAtIndex:@{removeOtherSubviewAtIndex:}!SSYAlert@{SSYAlert}}
+\subsubsection[{removeOtherSubviewAtIndex:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) removeOtherSubviewAtIndex: (int) {\em index}}}
+\label{interface_s_s_y_alert_42a3e095cf9380845f1425ddab0ca00d}
+
+
+Removes the \char`\"{}other subview\char`\"{} with a given index from the receiver. 
+
+The index must exist or an exception will be raised. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index}]The index of the \char`\"{}other subview\char`\"{} to be removed. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_0306aca65c1fb2d524ac8a83151cd067}{
+\index{SSYAlert@{SSYAlert}!runModalDialog@{runModalDialog}}
+\index{runModalDialog@{runModalDialog}!SSYAlert@{SSYAlert}}
+\subsubsection[{runModalDialog}]{\setlength{\rightskip}{0pt plus 5cm}- (void) runModalDialog }}
+\label{interface_s_s_y_alert_0306aca65c1fb2d524ac8a83151cd067}
+
+
+Runs the receiver as a modal dialog. 
+
+The only way to end a modal dialog is for the user to click a button.~ If the alert does not currently have a button 1, this method will add a button 1 before displaying.~ The title of the added button will be \mbox{[}NSString localize:@\char`\"{}ok\char`\"{}\mbox{]}.
+
+In most cases, you should configure subviews as desired and then invoke -display before invoking this method. \hypertarget{interface_s_s_y_alert_d39a91c4b93852513a2e0306a9c81041}{
+\index{SSYAlert@{SSYAlert}!runModalDialogTitle:message:buttons:@{runModalDialogTitle:message:buttons:}}
+\index{runModalDialogTitle:message:buttons:@{runModalDialogTitle:message:buttons:}!SSYAlert@{SSYAlert}}
+\subsubsection[{runModalDialogTitle:message:buttons:}]{\setlength{\rightskip}{0pt plus 5cm}+ (int) runModalDialogTitle: (NSString$\ast$) {\em title}\/ message: (NSString$\ast$) {\em msg}\/ buttons: (NSString$\ast$) {\em button1Title}\/ ,  {\em ...}}}
+\label{interface_s_s_y_alert_d39a91c4b93852513a2e0306a9c81041}
+
+
+Runs a modal dialog with a message and 1-3 buttons. 
+
+Blocks the current thread.
+
+Pass 0-3 button title arguments. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em title}]The window title or nil.~ If nil, title will be set to localized \char`\"{}Alert\char`\"{}. \item[{\em buttons,:}]0-3 strings which will become the titles of buttons 1-3, terminated by a nil sentinel. If no button titles are passed, dialog will have 1 button titled as localized \char`\"{}OK\char`\"{}. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Indicates button clicked by user: NSAlertDefaultReturn, NSAlertAlternateReturn or NSAlertOtherReturn \end{Desc}
+\hypertarget{interface_s_s_y_alert_8e294391f819c1e888b41adb2f5ece52}{
+\index{SSYAlert@{SSYAlert}!runModalDialogTitle:message:buttonsArray:@{runModalDialogTitle:message:buttonsArray:}}
+\index{runModalDialogTitle:message:buttonsArray:@{runModalDialogTitle:message:buttonsArray:}!SSYAlert@{SSYAlert}}
+\subsubsection[{runModalDialogTitle:message:buttonsArray:}]{\setlength{\rightskip}{0pt plus 5cm}+ (int) runModalDialogTitle: (NSString$\ast$) {\em title}\/ message: (NSString$\ast$) {\em msg}\/ buttonsArray: (NSArray$\ast$) {\em buttonsArray}}}
+\label{interface_s_s_y_alert_8e294391f819c1e888b41adb2f5ece52}
+
+
+Runs a modal dialog with a message and 1-3 buttons. 
+
+Blocks the current thread. Pass 0-3 button title arguments. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em title}]The window title or nil.~ If nil, title will be set to localized \char`\"{}Alert\char`\"{}. \item[{\em buttonsArray,:}]An array of 0-3 strings which will become the titles of buttons 1-3.~ If this parameter is nil or an empty array, dialog will have 1 button titled as localized \char`\"{}OK\char`\"{}. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Indicates button clicked by user: NSAlertDefaultReturn, NSAlertAlternateReturn or NSAlertOtherReturn \end{Desc}
+\hypertarget{interface_s_s_y_alert_635093dd5f073df822990abb2e00f45c}{
+\index{SSYAlert@{SSYAlert}!runModalSession@{runModalSession}}
+\index{runModalSession@{runModalSession}!SSYAlert@{SSYAlert}}
+\subsubsection[{runModalSession}]{\setlength{\rightskip}{0pt plus 5cm}- (void) runModalSession }}
+\label{interface_s_s_y_alert_635093dd5f073df822990abb2e00f45c}
+
+
+Runs the receiver as a modal session. 
+
+If a modal session is already running, this does nothing.
+
+In most cases, you should configure subviews as desired and then invoke -display before invoking this method. \hypertarget{interface_s_s_y_alert_1802c30942f4a728c4c5806ef7d0d9e5}{
+\index{SSYAlert@{SSYAlert}!runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:@{runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:}}
+\index{runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:@{runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:}!SSYAlert@{SSYAlert}}
+\subsubsection[{runModalSheetOnWindow:modalDelegate:didEndSelector:contextInfo:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) runModalSheetOnWindow: (NSWindow$\ast$) {\em documentWindow}\/ modalDelegate: (id) {\em modalDelegate}\/ didEndSelector: (SEL) {\em didEndSelector}\/ contextInfo: (void$\ast$) {\em contextInfo}}}
+\label{interface_s_s_y_alert_1802c30942f4a728c4c5806ef7d0d9e5}
+
+
+Runs the receiver on a sheet as a modal session and returns immediately. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em documentWindow}]The document window to which to attach the sheet. \item[{\em modalDelegate}]The object which will receive and must respond to the didEndSelector, or nil if you want the receiver to handle it. If the receiver handles it, its alertReturn will be set to the NSAlertReturn value corresponding to the button clicked by the user. \item[{\em didEndSelector}]The selector which will be sent to the modal delegate if it is not nil. Must match the signature with signature of sheetDidEnd:(NSWindow $\ast$)returnCode:(int)contextInfo:(void$\ast$).~ Also, to make the sheet go away, the didEndSelector must send -orderOut: to the 'sheet' argument it receives. \item[{\em contextInfo}]Pointer to data which will be returned as the third element of the didEndSelector. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_345913b14e1928b90356fdea34870286}{
+\index{SSYAlert@{SSYAlert}!setButton1Title:@{setButton1Title:}}
+\index{setButton1Title:@{setButton1Title:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setButton1Title:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setButton1Title: (NSString$\ast$) {\em title}}}
+\label{interface_s_s_y_alert_345913b14e1928b90356fdea34870286}
+
+
+Sets the title of the (rightmost) \char`\"{}default\char`\"{} button, the one whose key equivalent is . 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em title}]The desired button title, or nil. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_d21c7e11150433813919127326a49692}{
+\index{SSYAlert@{SSYAlert}!setButton2Title:@{setButton2Title:}}
+\index{setButton2Title:@{setButton2Title:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setButton2Title:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setButton2Title: (NSString$\ast$) {\em title}}}
+\label{interface_s_s_y_alert_d21c7e11150433813919127326a49692}
+
+
+Sets the title of the (leftmost) \char`\"{}alternate\char`\"{} button, the one whose key equivalent is 'escape'. 
+
+Passing title as nil will remove the button. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em title}]The desired button title, or nil. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_fad35969716cbdfd1dd97e17b1f53b3a}{
+\index{SSYAlert@{SSYAlert}!setButton3Title:@{setButton3Title:}}
+\index{setButton3Title:@{setButton3Title:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setButton3Title:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setButton3Title: (NSString$\ast$) {\em title}}}
+\label{interface_s_s_y_alert_fad35969716cbdfd1dd97e17b1f53b3a}
+
+
+Sets the title of the (middle) \char`\"{}other\char`\"{} button, the one with no key equivalent. 
+
+Passing title as nil will remove the button. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em title}]The desired button title, or nil. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_c2c9673b89f04e422a6605887ccea330}{
+\index{SSYAlert@{SSYAlert}!setCheckboxState:@{setCheckboxState:}}
+\index{setCheckboxState:@{setCheckboxState:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setCheckboxState:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setCheckboxState: (NSCellStateValue) {\em state}}}
+\label{interface_s_s_y_alert_c2c9673b89f04e422a6605887ccea330}
+
+
+Sets the state of the receiver's checkbox. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em state}]The state to be set. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_4dc3de44c2334f8d871bd01eeffe75b6}{
+\index{SSYAlert@{SSYAlert}!setCheckboxTitle:@{setCheckboxTitle:}}
+\index{setCheckboxTitle:@{setCheckboxTitle:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setCheckboxTitle:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setCheckboxTitle: (NSString$\ast$) {\em title}}}
+\label{interface_s_s_y_alert_4dc3de44c2334f8d871bd01eeffe75b6}
+
+
+Sets the title of the checkbox which will appear above the row of buttons at the bottom, in the right column of the receiver. 
+
+Passing title as nil will remove the checkbox. \hypertarget{interface_s_s_y_alert_afae30a5f44eb75295549e0330cce30b}{
+\index{SSYAlert@{SSYAlert}!setDoubleValue:@{setDoubleValue:}}
+\index{setDoubleValue:@{setDoubleValue:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setDoubleValue:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setDoubleValue: (double) {\em newValue}}}
+\label{interface_s_s_y_alert_afae30a5f44eb75295549e0330cce30b}
+
+
+Sets the double value of the receiver's progress bar. 
+
+Will also display new value, if the previous display triggered by invoking this method was more than .05 seconds ago.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em newValue}]The new double value to be set \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_13b93cc5e7a16913f29ce3da427509d1}{
+\index{SSYAlert@{SSYAlert}!setHelpAnchor:@{setHelpAnchor:}}
+\index{setHelpAnchor:@{setHelpAnchor:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setHelpAnchor:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setHelpAnchor: (NSString$\ast$) {\em anchor}}}
+\label{interface_s_s_y_alert_13b93cc5e7a16913f29ce3da427509d1}
+
+
+Sets the anchor in the application's Help Book which will be displayed in Help Viewer when the user clicks the question-mark \char`\"{}Help\char`\"{} button in the receiver's window. 
+
+Passing anchor as nil will remove the button. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em anchor}]The desired Help anchor \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_ecb6c9cfdff8c675ad91af57ffbc0fdf}{
+\index{SSYAlert@{SSYAlert}!setIconStyle:@{setIconStyle:}}
+\index{setIconStyle:@{setIconStyle:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setIconStyle:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setIconStyle: (int) {\em iconStyle}}}
+\label{interface_s_s_y_alert_ecb6c9cfdff8c675ad91af57ffbc0fdf}
+
+
+Sets the icon which will appear in the receiver. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em iconStyle}]Pass one of the constants SSYAlertIconNoIcon, SSYAlertIconCritical, or SSYAlertIconInformational \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_45ca8f6438df88f90a5fdadbf0e9e8b4}{
+\index{SSYAlert@{SSYAlert}!setIndeterminate:@{setIndeterminate:}}
+\index{setIndeterminate:@{setIndeterminate:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setIndeterminate:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setIndeterminate: (BOOL) {\em indeterminate}}}
+\label{interface_s_s_y_alert_45ca8f6438df88f90a5fdadbf0e9e8b4}
+
+
+Sets the receiver's progress bar animation to be indeterminate or not. 
+
+This also sets the progress bar to use threaded animation. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em indeterminate}]YES to make the animation indeterminate. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_a581989651d0253051484d8b87c4b9db}{
+\index{SSYAlert@{SSYAlert}!setMaxValue:@{setMaxValue:}}
+\index{setMaxValue:@{setMaxValue:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setMaxValue:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setMaxValue: (double) {\em maxValue}}}
+\label{interface_s_s_y_alert_a581989651d0253051484d8b87c4b9db}
+
+
+Sets the maximum value of the receiver's progress bar. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em maxValue}]The maximum value to be set \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_48bbcefe2f439c4185d19c5d34a744c1}{
+\index{SSYAlert@{SSYAlert}!setSmallText:@{setSmallText:}}
+\index{setSmallText:@{setSmallText:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setSmallText:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setSmallText: (NSString$\ast$) {\em text}}}
+\label{interface_s_s_y_alert_48bbcefe2f439c4185d19c5d34a744c1}
+
+
+Sets the receiver's Small Text to the localized word \char`\"{}Alert\char`\"{}, stolen from NSGetAlertPanel. 
+
+Small Text is the text that appears in the window under the Title Text. \hypertarget{interface_s_s_y_alert_7742169df21e1a6a03f4efba3a913555}{
+\index{SSYAlert@{SSYAlert}!setSmallTextAlignment:@{setSmallTextAlignment:}}
+\index{setSmallTextAlignment:@{setSmallTextAlignment:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setSmallTextAlignment:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setSmallTextAlignment: (NSTextAlignment) {\em alignment}}}
+\label{interface_s_s_y_alert_7742169df21e1a6a03f4efba3a913555}
+
+
+Sets the text alignment of the receiver's small text field. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em alignment}]The alignment to be set \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_e215fbf01c8ec15042ec40bb23429482}{
+\index{SSYAlert@{SSYAlert}!setTitleText:@{setTitleText:}}
+\index{setTitleText:@{setTitleText:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setTitleText:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setTitleText: (NSString$\ast$) {\em text}}}
+\label{interface_s_s_y_alert_e215fbf01c8ec15042ec40bb23429482}
+
+
+Sets the receiver's Title Text of the receiver to a given string. 
+
+Title Text appears in boldface near the top of the receiver window's content view.~ It is not the window title. \hypertarget{interface_s_s_y_alert_e816db2d738fc965ab7ff2210c174535}{
+\index{SSYAlert@{SSYAlert}!setTitleToDefaultAlert@{setTitleToDefaultAlert}}
+\index{setTitleToDefaultAlert@{setTitleToDefaultAlert}!SSYAlert@{SSYAlert}}
+\subsubsection[{setTitleToDefaultAlert}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setTitleToDefaultAlert }}
+\label{interface_s_s_y_alert_e816db2d738fc965ab7ff2210c174535}
+
+
+Sets the receiver's Title Text to the localized word \char`\"{}Alert\char`\"{}, stolen from NSGetAlertPanel. 
+
+Title Text appears in boldface near the top of the receiver window's content view.~ It is not the window title. \hypertarget{interface_s_s_y_alert_6e1c01e863e79182a929fa7678fb6fd9}{
+\index{SSYAlert@{SSYAlert}!setWindowTitle:@{setWindowTitle:}}
+\index{setWindowTitle:@{setWindowTitle:}!SSYAlert@{SSYAlert}}
+\subsubsection[{setWindowTitle:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) setWindowTitle: (NSString$\ast$) {\em title}}}
+\label{interface_s_s_y_alert_6e1c01e863e79182a929fa7678fb6fd9}
+
+
+Sets the title of the receiver's window. 
+
+If not set, or set to nil, window title defaults to mainBundle's CFBundleName (which should be the localized name of the app) \hypertarget{interface_s_s_y_alert_d81f6d234a6bbe8a7181c739f0b6ef2e}{
+\index{SSYAlert@{SSYAlert}!sharedAlert@{sharedAlert}}
+\index{sharedAlert@{sharedAlert}!SSYAlert@{SSYAlert}}
+\subsubsection[{sharedAlert}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf SSYAlert} $\ast$) sharedAlert }}
+\label{interface_s_s_y_alert_d81f6d234a6bbe8a7181c739f0b6ef2e}
+
+
+Convenience method for returning the application-wide sharedAlert instance of NSAlert. 
+
+Using this singleton sharedAlert is recommended at all times except when running as a sheet on a document, since the user can only focus on one alert at a time, and this usage will avoid creating a stack of dialogs in the event of nested events generating alerts. \begin{Desc}
+\item[Returns:]The application-wide sharedAlert, autoreleased \end{Desc}
+\hypertarget{interface_s_s_y_alert_7235377dad1e98bade605b665770f056}{
+\index{SSYAlert@{SSYAlert}!smallTextFont@{smallTextFont}}
+\index{smallTextFont@{smallTextFont}!SSYAlert@{SSYAlert}}
+\subsubsection[{smallTextFont}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSFont $\ast$) smallTextFont }}
+\label{interface_s_s_y_alert_7235377dad1e98bade605b665770f056}
+
+
+Returns the font used in the receiver's small text. 
+
+May be used to create other subviews with same \char`\"{}look\char`\"{}. \hypertarget{interface_s_s_y_alert_7e4e69784b95d9fa49cbc8dc12fc2e0e}{
+\index{SSYAlert@{SSYAlert}!smallTextHeight@{smallTextHeight}}
+\index{smallTextHeight@{smallTextHeight}!SSYAlert@{SSYAlert}}
+\subsubsection[{smallTextHeight}]{\setlength{\rightskip}{0pt plus 5cm}+ (float) smallTextHeight }}
+\label{interface_s_s_y_alert_7e4e69784b95d9fa49cbc8dc12fc2e0e}
+
+
+Returns the height of the receiver's small text view, when it showing a single line of text. 
+
+May be used to create other subviews with same \char`\"{}look\char`\"{}. \hypertarget{interface_s_s_y_alert_203afc0936f3aa64eb7ac373644902b2}{
+\index{SSYAlert@{SSYAlert}!titleTextFont@{titleTextFont}}
+\index{titleTextFont@{titleTextFont}!SSYAlert@{SSYAlert}}
+\subsubsection[{titleTextFont}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSFont $\ast$) titleTextFont }}
+\label{interface_s_s_y_alert_203afc0936f3aa64eb7ac373644902b2}
+
+
+Returns the font used in the receiver's title text. 
+
+May be used to create other subviews with same \char`\"{}look\char`\"{}. \hypertarget{interface_s_s_y_alert_1b78c67ac1fbc0cd72bee1875f49fa3a}{
+\index{SSYAlert@{SSYAlert}!titleTextHeight@{titleTextHeight}}
+\index{titleTextHeight@{titleTextHeight}!SSYAlert@{SSYAlert}}
+\subsubsection[{titleTextHeight}]{\setlength{\rightskip}{0pt plus 5cm}+ (float) titleTextHeight }}
+\label{interface_s_s_y_alert_1b78c67ac1fbc0cd72bee1875f49fa3a}
+
+
+Returns the height of the receiver's title text view, when it showing a single line of text. 
+
+May be used to create other subviews with same \char`\"{}look\char`\"{}. 
+
+\subsection{Property Documentation}
+\hypertarget{interface_s_s_y_alert_b3065737274d58b88c313f36a54316eb}{
+\index{SSYAlert@{SSYAlert}!alertReturn@{alertReturn}}
+\index{alertReturn@{alertReturn}!SSYAlert@{SSYAlert}}
+\subsubsection[{alertReturn}]{\setlength{\rightskip}{0pt plus 5cm}- (NSInteger) alertReturn\hspace{0.3cm}{\tt  \mbox{[}read, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_b3065737274d58b88c313f36a54316eb}
+
+
+Indicates which button was last clicked. 
+
+Use this to get the button-clicked result in cases where you did not use one of the +runModalDialog... or +alertError... methods \begin{Desc}
+\item[Returns:]Same as Apple's alert returns: \begin{itemize}
+\item If button 1 was clicked, NSAlertDefaultReturn. \item If button 2 was clicked, NSAlertAlternateReturn. \item If button 3 was clicked, NSAlertOtherReturn. \end{itemize}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_67ba8d274d0cfa509a178ee291f60d6f}{
+\index{SSYAlert@{SSYAlert}!allowsShrinking@{allowsShrinking}}
+\index{allowsShrinking@{allowsShrinking}!SSYAlert@{SSYAlert}}
+\subsubsection[{allowsShrinking}]{\setlength{\rightskip}{0pt plus 5cm}- (BOOL) allowsShrinking\hspace{0.3cm}{\tt  \mbox{[}read, write, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_67ba8d274d0cfa509a178ee291f60d6f}
+
+
+Sets whether or not the titleTextView, smallTextView, and otherSubview heights are allowed to shrink if their content is reduced. 
+
+If text is going to be changed repeatedly, it does not look good for the window height to change every time, so you send this message with NO to keep that from happening.
+
+If you never send this message, the setting remains at its default value of YES.
+
+This method does not control whether or not the window as a whole shrinks or not.~ So, if you want the window to remain the same size, you must also not add or remove subviews.~ Reminder: -setTitleText:nil and -setSmallText:nil will remove these respective subviews. \hypertarget{interface_s_s_y_alert_e78e0ec0ccc4588e3fed7e25813b2e94}{
+\index{SSYAlert@{SSYAlert}!configurations@{configurations}}
+\index{configurations@{configurations}!SSYAlert@{SSYAlert}}
+\subsubsection[{configurations}]{\setlength{\rightskip}{0pt plus 5cm}- (NSMutableArray $\ast$) configurations\hspace{0.3cm}{\tt  \mbox{[}read, retain\mbox{]}}}}
+\label{interface_s_s_y_alert_e78e0ec0ccc4588e3fed7e25813b2e94}
+
+
+Provides direct access to the receiver's configurations stack. 
+
+Useful for debugging.~ Can't think of any good reason to use this in production. \hypertarget{interface_s_s_y_alert_eb559c5354ac41e9143ac2970de5addc}{
+\index{SSYAlert@{SSYAlert}!otherSubviews@{otherSubviews}}
+\index{otherSubviews@{otherSubviews}!SSYAlert@{SSYAlert}}
+\subsubsection[{otherSubviews}]{\setlength{\rightskip}{0pt plus 5cm}- (NSMutableArray $\ast$) otherSubviews\hspace{0.3cm}{\tt  \mbox{[}read, retain\mbox{]}}}}
+\label{interface_s_s_y_alert_eb559c5354ac41e9143ac2970de5addc}
+
+
+Provides direct access to the receiver's otherSubviews. 
+
+Useful to retrieve values that user has entered into controls in otherSubviews. \hypertarget{interface_s_s_y_alert_cc8eac2be6bd9cc10999af6b51994082}{
+\index{SSYAlert@{SSYAlert}!progressBar@{progressBar}}
+\index{progressBar@{progressBar}!SSYAlert@{SSYAlert}}
+\subsubsection[{progressBar}]{\setlength{\rightskip}{0pt plus 5cm}- (NSProgressIndicator $\ast$) progressBar\hspace{0.3cm}{\tt  \mbox{[}read, retain\mbox{]}}}}
+\label{interface_s_s_y_alert_cc8eac2be6bd9cc10999af6b51994082}
+
+
+Provides direct access to the receiver's progress bar for special purposes. 
+
+See documentation of methods -setIndeterminate:, -setMaxValue:, -setDoubleValue: to learn why it is better to use those indirect methods instead. This getter may be used, carefully, for special purposes. \hypertarget{interface_s_s_y_alert_57507576c298844a045e2e9a9fb2ce0c}{
+\index{SSYAlert@{SSYAlert}!progressBarShouldAnimate@{progressBarShouldAnimate}}
+\index{progressBarShouldAnimate@{progressBarShouldAnimate}!SSYAlert@{SSYAlert}}
+\subsubsection[{progressBarShouldAnimate}]{\setlength{\rightskip}{0pt plus 5cm}- (BOOL) progressBarShouldAnimate\hspace{0.3cm}{\tt  \mbox{[}read, write, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_57507576c298844a045e2e9a9fb2ce0c}
+
+
+Starts and stops animation of the receiver's progress bar. 
+
+Use this method instead of sending a message to the progress bar directly.~ It's a long story. \hypertarget{interface_s_s_y_alert_69975a8b700fb1d2985b2794e0120e2f}{
+\index{SSYAlert@{SSYAlert}!rightColumnMinimumWidth@{rightColumnMinimumWidth}}
+\index{rightColumnMinimumWidth@{rightColumnMinimumWidth}!SSYAlert@{SSYAlert}}
+\subsubsection[{rightColumnMinimumWidth}]{\setlength{\rightskip}{0pt plus 5cm}- (float) rightColumnMinimumWidth\hspace{0.3cm}{\tt  \mbox{[}read, write, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_69975a8b700fb1d2985b2794e0120e2f}
+
+
+Sets the mininum width of the right column of the receiver. 
+
+Note that this sets only the minimum.~ If required to accomodate the text on the buttons or checkbox title, the right column may be wider than set here.~ This method is useful in case you have alot of text which would would make the window too tall and skinny if the default right column width of 250 points were used. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em minWidth}]The minimum width to be set. \end{description}
+\end{Desc}
+\hypertarget{interface_s_s_y_alert_bcde739174ec356844c26b7487ea1a79}{
+\index{SSYAlert@{SSYAlert}!smallTextMaxChars@{smallTextMaxChars}}
+\index{smallTextMaxChars@{smallTextMaxChars}!SSYAlert@{SSYAlert}}
+\subsubsection[{smallTextMaxChars}]{\setlength{\rightskip}{0pt plus 5cm}- (NSInteger) smallTextMaxChars\hspace{0.3cm}{\tt  \mbox{[}read, write, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_bcde739174ec356844c26b7487ea1a79}
+
+
+Sets maximum number of characters, after which the smallText will be nicely truncated. 
+
+Truncation occurs by inserting an ellipsis 2/3 of the way through.~ If this method is never invoked, defaults to 1500. \hypertarget{interface_s_s_y_alert_b15db601566d115c516c43320f306603}{
+\index{SSYAlert@{SSYAlert}!smallTextView@{smallTextView}}
+\index{smallTextView@{smallTextView}!SSYAlert@{SSYAlert}}
+\subsubsection[{smallTextView}]{\setlength{\rightskip}{0pt plus 5cm}- (NSTextView $\ast$) smallTextView\hspace{0.3cm}{\tt  \mbox{[}read, retain\mbox{]}}}}
+\label{interface_s_s_y_alert_b15db601566d115c516c43320f306603}
+
+
+Provides direct access to the receiver's small text view for special purposes. 
+
+Normally, use -setSmallText.~ This getter may be used, carefully, for special purposes. \hypertarget{interface_s_s_y_alert_99e51047e4caf119c09dc51042afa504}{
+\index{SSYAlert@{SSYAlert}!titleMaxChars@{titleMaxChars}}
+\index{titleMaxChars@{titleMaxChars}!SSYAlert@{SSYAlert}}
+\subsubsection[{titleMaxChars}]{\setlength{\rightskip}{0pt plus 5cm}- (NSInteger) titleMaxChars\hspace{0.3cm}{\tt  \mbox{[}read, write, assign\mbox{]}}}}
+\label{interface_s_s_y_alert_99e51047e4caf119c09dc51042afa504}
+
+
+Sets maximum number of characters, after which the title will be nicely truncated. 
+
+Truncation occurs by inserting an ellipsis 2/3 of the way through.~ If this method is never invoked, defaults to 500. \hypertarget{interface_s_s_y_alert_787999e7c2336835bccfccb6a956128e}{
+\index{SSYAlert@{SSYAlert}!titleTextView@{titleTextView}}
+\index{titleTextView@{titleTextView}!SSYAlert@{SSYAlert}}
+\subsubsection[{titleTextView}]{\setlength{\rightskip}{0pt plus 5cm}- (NSTextView $\ast$) titleTextView\hspace{0.3cm}{\tt  \mbox{[}read, retain\mbox{]}}}}
+\label{interface_s_s_y_alert_787999e7c2336835bccfccb6a956128e}
+
+
+Provides direct access to the receiver's title text view for special purposes. 
+
+Normally, use -setTitleText.~ This getter may be used, carefully, for special purposes. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Documents/Programming/Projects/SSYAlert/SSYAlert.h\item 
+Documents/Programming/Projects/SSYAlert/SSYAlert.m\end{CompactItemize}

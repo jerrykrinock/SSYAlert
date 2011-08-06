@@ -1,0 +1,114 @@
+\hypertarget{interface_s_s_y_labelled_text_field}{
+\section{SSYLabelledTextField Class Reference}
+\label{interface_s_s_y_labelled_text_field}\index{SSYLabelledTextField@{SSYLabelledTextField}}
+}
+This class provides a control which consists of two text fields, a non-editable {\em key\/} field and, below it, an editable {\em value\/} field.  
+
+
+{\tt \#import $<$SSYLabelledTextField.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+(void) - \hyperlink{interface_s_s_y_labelled_text_field_87d5c2cae146575b5546c12207e4aa93}{sizeHeightToFitAllowShrinking:}
+\begin{CompactList}\small\item\em Resizes the height of the receiver to accomodate the current text values, subject to allowsShrinking. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+(\hyperlink{interface_s_s_y_labelled_text_field}{SSYLabelledTextField} $\ast$) + \hyperlink{interface_s_s_y_labelled_text_field_771e047022ab3abff4b688d29de85089}{labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:}
+\begin{CompactList}\small\item\em Convenience method for getting an autoreleased instance of this class. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_826e43a34e383f6cbdb6461428f4cc09}{
+NSWindowController $\ast$ \textbf{windowController}}
+\label{interface_s_s_y_labelled_text_field_826e43a34e383f6cbdb6461428f4cc09}
+
+\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_eec5fc235f435887da8cca159bb17678}{
+NSString $\ast$ \textbf{errorMessage}}
+\label{interface_s_s_y_labelled_text_field_eec5fc235f435887da8cca159bb17678}
+
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_64538da066a5d16f8b5b86cc25fa803f}{
+NSTextField $\ast$ \textbf{keyField}}
+\label{interface_s_s_y_labelled_text_field_64538da066a5d16f8b5b86cc25fa803f}
+
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_fd9812fce2d7827fb8a0de538bfdce57}{
+id \textbf{validationObject}}
+\label{interface_s_s_y_labelled_text_field_fd9812fce2d7827fb8a0de538bfdce57}
+
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_f26505ea73ed035bcf7b86f1c47a9177}{
+SEL \textbf{validationSelector}}
+\label{interface_s_s_y_labelled_text_field_f26505ea73ed035bcf7b86f1c47a9177}
+
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_e1c317c6cb4c85d0fb46bccc971e7970}{
+NSTextField $\ast$ \textbf{valueField}}
+\label{interface_s_s_y_labelled_text_field_e1c317c6cb4c85d0fb46bccc971e7970}
+
+\item 
+\hypertarget{interface_s_s_y_labelled_text_field_39a9bf9401a0a317e79b3689d2836e61}{
+id \textbf{windowController}}
+\label{interface_s_s_y_labelled_text_field_39a9bf9401a0a317e79b3689d2836e61}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a control which consists of two text fields, a non-editable {\em key\/} field and, below it, an editable {\em value\/} field. 
+
+May be used, for example for a user to fill in a {\em Name\/}, {\em Password\/} {\em Favorite Animal\/}, etc. etc. Any single line of text. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_s_s_y_labelled_text_field_771e047022ab3abff4b688d29de85089}{
+\index{SSYLabelledTextField@{SSYLabelledTextField}!labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:@{labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:}}
+\index{labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:@{labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:}!SSYLabelledTextField@{SSYLabelledTextField}}
+\subsubsection[{labelledTextFieldSecure:validationSelector:validationObject:windowController:displayedKey:displayedValue:editable:errorMessage:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf SSYLabelledTextField} $\ast$) labelledTextFieldSecure: (BOOL) {\em secure}\/ validationSelector: (SEL) {\em validationSelector}\/ validationObject: (id) {\em validationObject}\/ windowController: (id) {\em windowController}\/ displayedKey: (NSString$\ast$) {\em displayedKey}\/ displayedValue: (NSString$\ast$) {\em displayedValue}\/ editable: (BOOL) {\em editable}\/ errorMessage: (NSString$\ast$) {\em errorMessage}}}
+\label{interface_s_s_y_labelled_text_field_771e047022ab3abff4b688d29de85089}
+
+
+Convenience method for getting an autoreleased instance of this class. 
+
+You can implement the validationSelector method in an NSString category.
+
+If a validationSelector is provided, the value entered by the user is continuously validated (using -controlTextDidChange:).~ After validation, the instance's \char`\"{}window controller\char`\"{} (see below) is tested to see if it responds to setEnabled:, or setIsEnabled:, and setWhyDisabled:.~ If they respond, and the entry is valid, these two messages are sent with arguments YES and nil, respectively.~ If they respond, and the entry is not valid, these two messages are sent with arguments NO and errorMessage, respectively.
+
+The instance's \char`\"{}window controller\char`\"{} is normally obtained by sending -window.windowController, but in some cases, such as when this control is used in an \hyperlink{interface_s_s_y_alert}{SSYAlert}, the initial validation performed by this class' initializer is executed before being the receiver is added to its window's contentView, and in this case -window.windowController, will return nil.~ The two validation (or more likely, invalidation) messages described above will then be sent to nil and thus not have the intended effect.~ The fix implemented for this is that if -window.windowController returns nil, the two messages are sent to the windowController ivar instead.
+
+The reason the ivar is not used all the time is because when an \hyperlink{interface_s_s_y_labelled_text_field}{SSYLabelledTextField} object is unarchived after a -deepCopy of it is stored in SSYAlertView's configurations stack, the windowController ivar will be the old window controller (which is the old SSYAlertView). The old SSYAlertView was retained, so it won't crash, but the message goes to a defunct, no-longer-visible SSYAlertView and thus, again, has no effect.
+
+Code implementing this detection and switching is in -validate.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em secure}]YES if the {\em value\/} field should be an NSSecureTextField, NO for a plain NSTextField \item[{\em validationSelector}]Either NULL, or a selector to which NSString must respond and return an NSNumber.~ The -boolValue of the NSNumber should indicate whether or not its receiver is a {\em valid\/} entry for the returned \hyperlink{interface_s_s_y_labelled_text_field}{SSYLabelledTextField} instance.~ This selector may take 0 or 1 argument of type id.~ If this parameter is NULL, no validation will be performed. \item[{\em validationObject}]An optional argument to the validationSelector.~ If the validationSelector takes no arguments, pass nil. \item[{\em windowController}]The receiver's window controller to which validation messages will be sent.~ If the receiver is being installed into an \hyperlink{interface_s_s_y_alert}{SSYAlert}, this would be that \hyperlink{interface_s_s_y_alert}{SSYAlert} object.~ See method details for explanation of why this is needed. \item[{\em displayedKey}]The string to be set in the {\em key\/} or {\em label\/} field. \item[{\em displayedValue}]The initial string to be set in the {\em value\/} field, or nil to set an empty string. \item[{\em editable}]YES if the {\em value\/} field should be editable, NO otherwise. \item[{\em errorMessage}]An error message which will be sent as the argument of a message -setWhyDisabled:to the returned instance's window's window controller, if it responds. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The instance, autoreleased. \end{Desc}
+\hypertarget{interface_s_s_y_labelled_text_field_87d5c2cae146575b5546c12207e4aa93}{
+\index{SSYLabelledTextField@{SSYLabelledTextField}!sizeHeightToFitAllowShrinking:@{sizeHeightToFitAllowShrinking:}}
+\index{sizeHeightToFitAllowShrinking:@{sizeHeightToFitAllowShrinking:}!SSYLabelledTextField@{SSYLabelledTextField}}
+\subsubsection[{sizeHeightToFitAllowShrinking:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) sizeHeightToFitAllowShrinking: (BOOL) {\em allowShrinking}}}
+\label{interface_s_s_y_labelled_text_field_87d5c2cae146575b5546c12207e4aa93}
+
+
+Resizes the height of the receiver to accomodate the current text values, subject to allowsShrinking. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em allowShrinking}]YES if the height is allowed to be reduced. If this parameter is NO, and less height than the current height is required, this invocation will not reduce the height but will instead leave empty space. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYLabelledTextField.h\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYLabelledTextField.m\end{CompactItemize}

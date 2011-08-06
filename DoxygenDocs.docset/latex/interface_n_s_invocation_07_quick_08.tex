@@ -1,0 +1,97 @@
+\hypertarget{interface_n_s_invocation_07_quick_08}{
+\section{NSInvocation(Quick) Class Reference}
+\label{interface_n_s_invocation_07_quick_08}\index{NSInvocation(Quick)@{NSInvocation(Quick)}}
+}
+A category on NSInvocation to return a simple invocation without much code.  
+
+
+{\tt \#import $<$NSInvocation+Quick.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+(void) - \hyperlink{interface_n_s_invocation_07_quick_08_30fb8d77f50edc06f311a1e90e503259}{invokeOnMainThreadWaitUntilDone:}
+\begin{CompactList}\small\item\em Invokes (performs) the receiver on the main thread, similar to -\mbox{[}NSObject performSelectorOnMainThread:::\mbox{]}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+(NSInvocation $\ast$) + \hyperlink{interface_n_s_invocation_07_quick_08_a9eac88859ea835ef6fb9590c9dd41ea}{invocationWithTarget:selector:retainArguments:argumentAddresses:}
+\begin{CompactList}\small\item\em Convenience method for returning a simple invocation. \item\end{CompactList}\item 
+(NSInvocation $\ast$) + \hyperlink{interface_n_s_invocation_07_quick_08_e94eccaa8ebb49c224133f416ed60208}{invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:}
+\begin{CompactList}\small\item\em Creates an invocation and with given parameters and immediately invokes it on the main thread. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A category on NSInvocation to return a simple invocation without much code. 
+
+I use NSInvocation just often enough to be dangerous.~ Using this category greatly reduces the time I need to spend refreshing myself with the documentation and troubleshooting crashes. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_n_s_invocation_07_quick_08_a9eac88859ea835ef6fb9590c9dd41ea}{
+\index{NSInvocation(Quick)@{NSInvocation(Quick)}!invocationWithTarget:selector:retainArguments:argumentAddresses:@{invocationWithTarget:selector:retainArguments:argumentAddresses:}}
+\index{invocationWithTarget:selector:retainArguments:argumentAddresses:@{invocationWithTarget:selector:retainArguments:argumentAddresses:}!NSInvocation(Quick)@{NSInvocation(Quick)}}
+\subsubsection[{invocationWithTarget:selector:retainArguments:argumentAddresses:}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSInvocation$\ast$) invocationWithTarget: (id) {\em target}\/ selector: (SEL) {\em selector}\/ retainArguments: (BOOL) {\em retainArguments}\/ argumentAddresses: (void $\ast$) {\em firstArgumentAddress}\/ ,  {\em ...}}}
+\label{interface_n_s_invocation_07_quick_08_a9eac88859ea835ef6fb9590c9dd41ea}
+
+
+Convenience method for returning a simple invocation. 
+
+The invocation's arguments are supplied to this method as a variable number of arguments (varargs) list.~ Each element in the list may be which may be the address of an object, the address of a non-object, or NULL.
+
+This elements in the va\_\-arg-style list beginning with firstArgumentAddress may point to any mixture of objects, nil objects or non-objects. \begin{itemize}
+\item For objects, add a pointer to a pointer -- an NSSomeObject$\ast$$\ast$ -- to the list. \item For a nil object argument, add a NULL to the list.~ The method will detect this and apply special handling. \item For non-objects, add the address of the variable to the list. \end{itemize}
+Example: Consider invoking a method declared as: -(id)myMethodWithArg1:(id)arg1 arg2:(NSDictionary$\ast$) arg3:(int)arg3 ; with these arguments: id arg1 = @\char`\"{}Hello\char`\"{} ; id arg2 = nil ; int arg3 = 5 ; The list of argumentAddresses would be:~ \&arg1, NULL, \&arg3
+
+If there no arguments, pass NULL.~ (It will be ignored.)
+
+This method knows how many arguments to read from the list by creating a method signature of 'selector'.~ It reads that many arguments from the list and ignores any further arguments.~ A NULL sentinel termination is not required.
+
+If, after creating an invocation using this method, you want to modify an argument, you can do so by invoking -setArgument:atIndex:.~ But when doing so, remember that argument indexes start at 2.~ For example, to modify the first argument, pass atIndex:2.
+
+Also remember that, per NSInvocation documentation, none of the the parameters of the selector being invoked may themselves be a va\_\-arg argument list, nor a union.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em target}]The object which will receive the invocation when it is invoked. \item[{\em selector}]The selector that will be invoked when the invocation is invoked. \item[{\em retainArgument}]Tells the invocation to retain its arguments, but note that this will not retain all argument types.~ See the 10.5 Cocoa Foudnation release notes \href{http://developer.apple.com/releasenotes/Cocoa/Foundation.html}{\tt http://developer.apple.com/releasenotes/Cocoa/Foundation.html} and search for text 'retainArguments'. \item[{\em firstArgumentAddress}]A va\_\-args-style list of the addresses of the arguments passed to the selector when the invocation is invoked. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]an autoreleased NSInvocation$\ast$ \end{Desc}
+\hypertarget{interface_n_s_invocation_07_quick_08_e94eccaa8ebb49c224133f416ed60208}{
+\index{NSInvocation(Quick)@{NSInvocation(Quick)}!invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:@{invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:}}
+\index{invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:@{invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:}!NSInvocation(Quick)@{NSInvocation(Quick)}}
+\subsubsection[{invokeOnMainThreadTarget:selector:retainArguments:waitUntilDone:argumentAddresses:}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSInvocation$\ast$) invokeOnMainThreadTarget: (id) {\em target}\/ selector: (SEL) {\em selector}\/ retainArguments: (BOOL) {\em retainArguments}\/ waitUntilDone: (BOOL) {\em waitUntilDone}\/ argumentAddresses: (void $\ast$) {\em firstArgumentAddress}\/ ,  {\em ...}}}
+\label{interface_n_s_invocation_07_quick_08_e94eccaa8ebb49c224133f416ed60208}
+
+
+Creates an invocation and with given parameters and immediately invokes it on the main thread. 
+
+This method is a concatenation of the code in +invocationWithTarget:selector:retainArguments:argumentAddresses: followed by -invokeOnMainThreadWaitUntilDone:.~ For information see those methods.
+
+\begin{Desc}
+\item[Returns:]The invocation is returned so that you can get a return value in case it returns one.~ Send -getReturnValue to it. \end{Desc}
+\hypertarget{interface_n_s_invocation_07_quick_08_30fb8d77f50edc06f311a1e90e503259}{
+\index{NSInvocation(Quick)@{NSInvocation(Quick)}!invokeOnMainThreadWaitUntilDone:@{invokeOnMainThreadWaitUntilDone:}}
+\index{invokeOnMainThreadWaitUntilDone:@{invokeOnMainThreadWaitUntilDone:}!NSInvocation(Quick)@{NSInvocation(Quick)}}
+\subsubsection[{invokeOnMainThreadWaitUntilDone:}]{\setlength{\rightskip}{0pt plus 5cm}- (void) invokeOnMainThreadWaitUntilDone: (BOOL) {\em waitUntilDone}}}
+\label{interface_n_s_invocation_07_quick_08_30fb8d77f50edc06f311a1e90e503259}
+
+
+Invokes (performs) the receiver on the main thread, similar to -\mbox{[}NSObject performSelectorOnMainThread:::\mbox{]}. 
+
+Hint: Use NSInvocation+Quick to make invocations quickly and easily.
+
+If waitUntilDone is NO, this method returns nil immediately.~ In that case, you can get the return value later by sending -getReturnValue to the invocation.
+
+{\em How it works.\/}~ This method invokes the desired selector on the main thread by using -performSelectorOnMainThread:withObject:waitUntilDone:.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em waitUntilDone}]YES if you would like to wait until the invocation performance is complete, otherwise NO. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Documents/Programming/Projects/SSYAlert/DemoApp/NSInvocation+Quick.h\end{CompactItemize}

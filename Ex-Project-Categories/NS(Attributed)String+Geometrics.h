@@ -1,0 +1,1 @@
+../../../CategoriesObjC/NS(Attributed)String+Geometrics/NS(Attributed)String+Geometrics.h

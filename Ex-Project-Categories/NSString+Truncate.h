@@ -1,0 +1,1 @@
+../../../CategoriesObjC/NSString+Truncate.h

@@ -1,0 +1,254 @@
+\hypertarget{interface_s_s_y_version_triplet}{
+\section{SSYVersionTriplet Class Reference}
+\label{interface_s_s_y_version_triplet}\index{SSYVersionTriplet@{SSYVersionTriplet}}
+}
+A triplet of integers, as in major.minor.bugFix, describing the version of an application or other project.  
+
+
+{\tt \#import $<$SSYVersionTriplet.h$>$}
+
+Inheritance diagram for SSYVersionTriplet::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{interface_s_s_y_version_triplet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+(int) - \hyperlink{interface_s_s_y_version_triplet_314e1db1e768f717d5c088c41facac60}{bugFix}
+\begin{CompactList}\small\item\em Gets the bugFix value of the receiver \{major,minor,bugFix\}. \item\end{CompactList}\item 
+(enum SSYVersionTripletComparisonResult) - \hyperlink{interface_s_s_y_version_triplet_4a0fc70cb8c34d49165e2120c001bec8}{compare:}
+\begin{CompactList}\small\item\em Compares receiver to another \hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet}. \item\end{CompactList}\item 
+(BOOL) - \hyperlink{interface_s_s_y_version_triplet_73d22b05184aa3165c700c4ce40046e8}{isEarlierThan:}
+\begin{CompactList}\small\item\em Calculates whether or not the receiver is earlier than another triplet. \item\end{CompactList}\item 
+(BOOL) - \hyperlink{interface_s_s_y_version_triplet_0a4119de6b3e3335fe39bba2eb1479a2}{isEqual:}
+\begin{CompactList}\small\item\em Calculates whether or not the receiver's values equal those of another triplet. \item\end{CompactList}\item 
+(BOOL) - \hyperlink{interface_s_s_y_version_triplet_2fb9009d066b8c8170f2afaec2b0fa33}{isLaterThan:}
+\begin{CompactList}\small\item\em Calculates whether or not the receiver is later than another triplet. \item\end{CompactList}\item 
+(int) - \hyperlink{interface_s_s_y_version_triplet_dfc6e27ff1718983120aec644064b3f7}{major}
+\begin{CompactList}\small\item\em Gets the major value of the receiver \{major,minor,bugFix\}. \item\end{CompactList}\item 
+(int) - \hyperlink{interface_s_s_y_version_triplet_24cfe844258de7623aa2d977e3569aa6}{minor}
+\begin{CompactList}\small\item\em Gets the minor value of the receiver \{major,minor,bugFix\}. \item\end{CompactList}\item 
+(NSString $\ast$) - \hyperlink{interface_s_s_y_version_triplet_b3561f24707f66e4829df0ca7a6e7c65}{string}
+\begin{CompactList}\small\item\em Returns a string \char`\"{}major.minor.bugFix\char`\"{} using values from the receiver. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+(NSString $\ast$) + \hyperlink{interface_s_s_y_version_triplet_5ec1d2dd6be65ebe2c05161d417e995e}{cleanVersionStringFromBundleIdentifier:}
+\begin{CompactList}\small\item\em For a given bundle on the system, gets version triplet using +versionTripletFromBundleIdentifier. Then reformats it using -string. \item\end{CompactList}\item 
+(NSString $\ast$) + \hyperlink{interface_s_s_y_version_triplet_6e29a80e862a92cb2844f2031c873539}{rawVersionStringFromBundleIdentifier:}
+\begin{CompactList}\small\item\em For a given bundle on the system, getss CFBundleShortVersionString if found. Otherwise, gets CFBundleVersion if found. Then reformats the string by using +versionTripletFromString followed by - string. \item\end{CompactList}\item 
+(\hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet} $\ast$) + \hyperlink{interface_s_s_y_version_triplet_2bfb684acb045a630eaedf693da0d268}{versionTripletFromBundleIdentifier:}
+\begin{CompactList}\small\item\em Returns an autoreleased version triplet from a bundle. \item\end{CompactList}\item 
+(\hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet} $\ast$) + \hyperlink{interface_s_s_y_version_triplet_4a2511b3efc1d98cbe6764b9719551e4}{versionTripletFromString:}
+\begin{CompactList}\small\item\em Parses a string to get a version number triplet. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_version_triplet_78af5cd0dc002dcdd5e6242066a37c11}{
+(\hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet} $\ast$) + \hyperlink{interface_s_s_y_version_triplet_78af5cd0dc002dcdd5e6242066a37c11}{versionTripletWithMajor:minor:bugFix:}}
+\label{interface_s_s_y_version_triplet_78af5cd0dc002dcdd5e6242066a37c11}
+
+\begin{CompactList}\small\item\em Returns an autoreleased version triplet with value \{major,minor,bugFix\}. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_version_triplet_e4d76ca42ea979b83993eec5f9d219cb}{
+(\hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet} $\ast$) + \hyperlink{interface_s_s_y_version_triplet_e4d76ca42ea979b83993eec5f9d219cb}{versionTripletWithStruct:}}
+\label{interface_s_s_y_version_triplet_e4d76ca42ea979b83993eec5f9d219cb}
+
+\begin{CompactList}\small\item\em Returns an autoreleased version triplet with value \{major,minor,bugFix\}. \item\end{CompactList}\item 
+\hypertarget{interface_s_s_y_version_triplet_914dceef5e772b5a10afdb0636491a6a}{
+(\hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet} $\ast$) + \hyperlink{interface_s_s_y_version_triplet_914dceef5e772b5a10afdb0636491a6a}{zeroVersionTriplet}}
+\label{interface_s_s_y_version_triplet_914dceef5e772b5a10afdb0636491a6a}
+
+\begin{CompactList}\small\item\em Returns an autoreleased version triplet with value \{0,0,0\}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{interface_s_s_y_version_triplet_841b83f82d7182a63f076028a7451a75}{
+\hyperlink{struct_s_s_y_version_struct__struct}{SSYVersionStruct} \textbf{versionStruct\_\-ivar}}
+\label{interface_s_s_y_version_triplet_841b83f82d7182a63f076028a7451a75}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A triplet of integers, as in major.minor.bugFix, describing the version of an application or other project. 
+
+Methods for creating, including parsing from bundles, and comparing version numbers are provided. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_s_s_y_version_triplet_314e1db1e768f717d5c088c41facac60}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!bugFix@{bugFix}}
+\index{bugFix@{bugFix}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{bugFix}]{\setlength{\rightskip}{0pt plus 5cm}- (int) bugFix }}
+\label{interface_s_s_y_version_triplet_314e1db1e768f717d5c088c41facac60}
+
+
+Gets the bugFix value of the receiver \{major,minor,bugFix\}. 
+
+\begin{Desc}
+\item[Returns:]the value \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_5ec1d2dd6be65ebe2c05161d417e995e}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!cleanVersionStringFromBundleIdentifier:@{cleanVersionStringFromBundleIdentifier:}}
+\index{cleanVersionStringFromBundleIdentifier:@{cleanVersionStringFromBundleIdentifier:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{cleanVersionStringFromBundleIdentifier:}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSString $\ast$) cleanVersionStringFromBundleIdentifier: (NSString$\ast$) {\em bundleIdentifier}}}
+\label{interface_s_s_y_version_triplet_5ec1d2dd6be65ebe2c05161d417e995e}
+
+
+For a given bundle on the system, gets version triplet using +versionTripletFromBundleIdentifier. Then reformats it using -string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bundleIdentifier}]The bundle identifier of the target bundle \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value of either CFBundleShortVersionString or CFBundleVersion, or nil \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_4a0fc70cb8c34d49165e2120c001bec8}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!compare:@{compare:}}
+\index{compare:@{compare:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{compare:}]{\setlength{\rightskip}{0pt plus 5cm}- (enum SSYVersionTripletComparisonResult) compare: ({\bf SSYVersionTriplet}$\ast$) {\em otherTriplet}}}
+\label{interface_s_s_y_version_triplet_4a0fc70cb8c34d49165e2120c001bec8}
+
+
+Compares receiver to another \hyperlink{interface_s_s_y_version_triplet}{SSYVersionTriplet}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em otherTriplet}]other triplet to be compared \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Result \char`\"{}Ascending\char`\"{} or \char`\"{}Descending\char`\"{} should be interpreted as if \char`\"{}going from receiver to otherTriplet\char`\"{} with \char`\"{}later = higher\char`\"{} \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_73d22b05184aa3165c700c4ce40046e8}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!isEarlierThan:@{isEarlierThan:}}
+\index{isEarlierThan:@{isEarlierThan:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{isEarlierThan:}]{\setlength{\rightskip}{0pt plus 5cm}- (BOOL) isEarlierThan: ({\bf SSYVersionTriplet}$\ast$) {\em otherTriplet}}}
+\label{interface_s_s_y_version_triplet_73d22b05184aa3165c700c4ce40046e8}
+
+
+Calculates whether or not the receiver is earlier than another triplet. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em otherTriplet}]The other triplet \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]YES or NO \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_0a4119de6b3e3335fe39bba2eb1479a2}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!isEqual:@{isEqual:}}
+\index{isEqual:@{isEqual:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{isEqual:}]{\setlength{\rightskip}{0pt plus 5cm}- (BOOL) isEqual: ({\bf SSYVersionTriplet}$\ast$) {\em otherTriplet}}}
+\label{interface_s_s_y_version_triplet_0a4119de6b3e3335fe39bba2eb1479a2}
+
+
+Calculates whether or not the receiver's values equal those of another triplet. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em otherTriplet}]The other triplet \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]YES or NO \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_2fb9009d066b8c8170f2afaec2b0fa33}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!isLaterThan:@{isLaterThan:}}
+\index{isLaterThan:@{isLaterThan:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{isLaterThan:}]{\setlength{\rightskip}{0pt plus 5cm}- (BOOL) isLaterThan: ({\bf SSYVersionTriplet}$\ast$) {\em otherTriplet}}}
+\label{interface_s_s_y_version_triplet_2fb9009d066b8c8170f2afaec2b0fa33}
+
+
+Calculates whether or not the receiver is later than another triplet. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em otherTriplet}]The other triplet \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]YES or NO \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_dfc6e27ff1718983120aec644064b3f7}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!major@{major}}
+\index{major@{major}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{major}]{\setlength{\rightskip}{0pt plus 5cm}- (int) major }}
+\label{interface_s_s_y_version_triplet_dfc6e27ff1718983120aec644064b3f7}
+
+
+Gets the major value of the receiver \{major,minor,bugFix\}. 
+
+\begin{Desc}
+\item[Returns:]the value \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_24cfe844258de7623aa2d977e3569aa6}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!minor@{minor}}
+\index{minor@{minor}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{minor}]{\setlength{\rightskip}{0pt plus 5cm}- (int) minor }}
+\label{interface_s_s_y_version_triplet_24cfe844258de7623aa2d977e3569aa6}
+
+
+Gets the minor value of the receiver \{major,minor,bugFix\}. 
+
+\begin{Desc}
+\item[Returns:]the value \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_6e29a80e862a92cb2844f2031c873539}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!rawVersionStringFromBundleIdentifier:@{rawVersionStringFromBundleIdentifier:}}
+\index{rawVersionStringFromBundleIdentifier:@{rawVersionStringFromBundleIdentifier:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{rawVersionStringFromBundleIdentifier:}]{\setlength{\rightskip}{0pt plus 5cm}+ (NSString $\ast$) rawVersionStringFromBundleIdentifier: (NSString$\ast$) {\em bundleIdentifier}}}
+\label{interface_s_s_y_version_triplet_6e29a80e862a92cb2844f2031c873539}
+
+
+For a given bundle on the system, getss CFBundleShortVersionString if found. Otherwise, gets CFBundleVersion if found. Then reformats the string by using +versionTripletFromString followed by - string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bundleIdentifier}]The bundle identifier of the target bundle \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value of either CFBundleShortVersionString or CFBundleVersion, or nil \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_b3561f24707f66e4829df0ca7a6e7c65}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!string@{string}}
+\index{string@{string}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}- (NSString $\ast$) string }}
+\label{interface_s_s_y_version_triplet_b3561f24707f66e4829df0ca7a6e7c65}
+
+
+Returns a string \char`\"{}major.minor.bugFix\char`\"{} using values from the receiver. 
+
+\begin{Desc}
+\item[Returns:]The string produced \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_2bfb684acb045a630eaedf693da0d268}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!versionTripletFromBundleIdentifier:@{versionTripletFromBundleIdentifier:}}
+\index{versionTripletFromBundleIdentifier:@{versionTripletFromBundleIdentifier:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{versionTripletFromBundleIdentifier:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf SSYVersionTriplet} $\ast$) versionTripletFromBundleIdentifier: (NSString$\ast$) {\em bundleIdentifier}}}
+\label{interface_s_s_y_version_triplet_2bfb684acb045a630eaedf693da0d268}
+
+
+Returns an autoreleased version triplet from a bundle. 
+
+Version number string is found as described in rawVersionTripletFromBundleIdentifier: and then version numbers in triplet are parsed as described in versionTripletFromString: \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bundleIdentifier}]The bundle identifier of the target bundle \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An autoreleased version triplet, or nil. \end{Desc}
+\hypertarget{interface_s_s_y_version_triplet_4a2511b3efc1d98cbe6764b9719551e4}{
+\index{SSYVersionTriplet@{SSYVersionTriplet}!versionTripletFromString:@{versionTripletFromString:}}
+\index{versionTripletFromString:@{versionTripletFromString:}!SSYVersionTriplet@{SSYVersionTriplet}}
+\subsubsection[{versionTripletFromString:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf SSYVersionTriplet} $\ast$) versionTripletFromString: (NSString$\ast$) {\em versionString}}}
+\label{interface_s_s_y_version_triplet_4a2511b3efc1d98cbe6764b9719551e4}
+
+
+Parses a string to get a version number triplet. 
+
+versionString should be something like \char`\"{}some wordOrWords 123.456.78\char`\"{}. some wordOrWords are optional, but if there are there they must end in a space. There must be no periods (dots) in some wordOrWords. The minor number and bugFix numbers, and the dots that must go with them are optional. If the string is nil or does not contain at least one decimal digit, this method returns nil. If the string contains only one decimal digit 'n', the returned value will have major=n, minor=0, bugFix=0. If the string contains only two decimal digits of the form 'm.n, the returned value will have major=m, minor=n, bugFix=0. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em versionString}]The string to be parsed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An autoreleased version triplet, or nil. \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYVersionTriplet.h\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYVersionTriplet.m\end{CompactItemize}

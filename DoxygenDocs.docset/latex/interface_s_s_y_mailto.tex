@@ -1,0 +1,40 @@
+\hypertarget{interface_s_s_y_mailto}{
+\section{SSYMailto Class Reference}
+\label{interface_s_s_y_mailto}\index{SSYMailto@{SSYMailto}}
+}
+This class contains a single method which creates a plain-text email message.  
+
+
+{\tt \#import $<$SSYMailto.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+(void) + \hyperlink{interface_s_s_y_mailto_a9925b568e39a361c17aa3eda2d6245c}{emailTo:subject:body:}
+\begin{CompactList}\small\item\em Method creates an email with a given address, subject and body by sending a mailto: URL to the shared NSWorkspace. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains a single method which creates a plain-text email message. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_s_s_y_mailto_a9925b568e39a361c17aa3eda2d6245c}{
+\index{SSYMailto@{SSYMailto}!emailTo:subject:body:@{emailTo:subject:body:}}
+\index{emailTo:subject:body:@{emailTo:subject:body:}!SSYMailto@{SSYMailto}}
+\subsubsection[{emailTo:subject:body:}]{\setlength{\rightskip}{0pt plus 5cm}+ (void) emailTo: (NSString$\ast$) {\em addres}\/ subject: (NSString$\ast$) {\em subject}\/ body: (NSString$\ast$) {\em body}}}
+\label{interface_s_s_y_mailto_a9925b568e39a361c17aa3eda2d6245c}
+
+
+Method creates an email with a given address, subject and body by sending a mailto: URL to the shared NSWorkspace. 
+
+Any characters in any argument not allowed by RFC 2396 will be percent-escape encoded. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em address}]The addressee, email address, of the message \item[{\em subject}]The message subject \item[{\em body}]The message body \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYMailto.h\item 
+Documents/Programming/Projects/SSYAlert/Ex-Project-Classes/SSYMailto.m\end{CompactItemize}
